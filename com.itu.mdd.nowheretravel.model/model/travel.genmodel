@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.itu.mdd.nowheretravel.model/src"
+    modelPluginID="com.itu.mdd.nowheretravel.model" modelName="Travel" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>travel.ecore</foreignModel>
+  <genPackages prefix="Nowheretravel" basePackage="com.itu.mdd.nowheretravel.model"
+      disposableProviderFactory="true" ecorePackage="travel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="travel.ecore#//InsuranceType">
+      <genEnumLiterals ecoreEnumLiteral="travel.ecore#//InsuranceType/CarInsurance"/>
+      <genEnumLiterals ecoreEnumLiteral="travel.ecore#//InsuranceType/TravelInsurance"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="travel.ecore#//Node">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Node/outgoingConnections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Node/ingoingConnections"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Start"/>
+    <genClasses ecoreClass="travel.ecore#//End"/>
+    <genClasses image="false" ecoreClass="travel.ecore#//Item">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Item/name"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Flight">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Flight/destinationTown"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Flight/destinationCountry"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Hotel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Hotel/hotelName"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="travel.ecore#//Tour"/>
+    <genClasses ecoreClass="travel.ecore#//TrekkingTour"/>
+    <genClasses ecoreClass="travel.ecore#//ParachuteTour"/>
+    <genClasses ecoreClass="travel.ecore#//CarRental"/>
+    <genClasses ecoreClass="travel.ecore#//Insurance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Insurance/type"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Travel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/start"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/connections"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Data/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Data/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Parameter/name"/>
+    </genClasses>
+    <genClasses ecoreClass="travel.ecore#//Connection"/>
+  </genPackages>
+</genmodel:GenModel>

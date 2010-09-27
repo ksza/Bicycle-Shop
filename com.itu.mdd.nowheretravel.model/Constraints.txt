@@ -1,0 +1,4 @@
+* the travel package should have a Start and an End node
+* a hotel cannot be booked until the flight is confirmed 
+* an item needing an insurance must be followed by an insurance purchase
+* a tour cannot be booked without a proper insurance
