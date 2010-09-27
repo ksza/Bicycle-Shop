@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<t:Travel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:t="http://itu.nowheretravel.schemes/t.ecore">
+  <start outgoingConnections="//@connections.0 //@connections.3"/>
+  <data name="Family">
+    <parameters name="Family Name" value="Hansen"/>
+    <parameters name="Members" value="5"/>
+  </data>
+  <end ingoingConnections="//@connections.2 //@connections.5"/>
+  <connections name="con1" sourceNode="//@start" targetNode="//@items.1"/>
+  <connections name="con2" sourceNode="//@items.0" targetNode="//@items.1"/>
+  <connections name="con3" sourceNode="//@items.1" targetNode="//@end"/>
+  <connections name="con4" sourceNode="//@start" targetNode="//@items.2"/>
+  <connections name="con5" sourceNode="//@items.2" targetNode="//@items.3"/>
+  <connections name="con6" sourceNode="//@items.3" targetNode="//@end"/>
+  <items xsi:type="t:Flight" outgoingConnections="//@connections.1" name="toSpain" destinationTown="Porto Rico" destinationCountry="Spain"/>
+  <items xsi:type="t:Hotel" outgoingConnections="//@connections.2" ingoingConnections="//@connections.0 //@connections.1" name="viewHotel" hotelName="View hotel"/>
+  <items xsi:type="t:CarRental" outgoingConnections="//@connections.4" ingoingConnections="//@connections.3" name="carRental"/>
+  <items xsi:type="t:Insurance" outgoingConnections="//@connections.5" ingoingConnections="//@connections.4" name="carInsurance"/>
+</t:Travel>
