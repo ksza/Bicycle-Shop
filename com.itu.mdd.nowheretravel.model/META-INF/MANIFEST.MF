@@ -7,6 +7,9 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: com.itu.mdd.nowheretravel.model.nowheretravel,
+ com.itu.mdd.nowheretravel.model.nowheretravel.util,
+ com.itu.mdd.nowheretravel.model.nowheretravel.impl
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy
