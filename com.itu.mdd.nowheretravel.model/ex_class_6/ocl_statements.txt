@@ -1,0 +1,6 @@
+self.ingoingConnections->size() = 0
+
+self.ingoingConnections->size() > 0 and self.outgoingConnections->size() > 0
+self.items->size() = self.items->select(ingoingConnections->size() > 0 and outgoingConnections->size() > 0)->size()
+
+self.outgoingConnections->select(targetNode.oclIsTypeOf(Insurance) and (targetNode.oclAsType(Insurance).type = InsuranceType::CarInsurance))->size() > 0
