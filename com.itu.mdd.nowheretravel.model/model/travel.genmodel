@@ -39,14 +39,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/data"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/end"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/connections"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Travel/items"/>
     </genClasses>
     <genClasses ecoreClass="travel.ecore#//Data">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Data/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Data/parameter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference travel.ecore#//Data/parameters"/>
     </genClasses>
     <genClasses ecoreClass="travel.ecore#//Parameter">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Parameter/value"/>
     </genClasses>
-    <genClasses ecoreClass="travel.ecore#//Connection"/>
+    <genClasses ecoreClass="travel.ecore#//Connection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute travel.ecore#//Connection/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Connection/sourceNode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference travel.ecore#//Connection/targetNode"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

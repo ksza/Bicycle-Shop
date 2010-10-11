@@ -1,0 +1,8 @@
+#Mon Oct 11 16:49:40 CEST 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/travel.genmodel
+gmf_dashboard/domainModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/travel.ecore
+gmf_dashboard/generationModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/gmf/travel.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/gmf/travel.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/gmf/travel.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/com.itu.mdd.nowheretravel.model/model/gmf/travel.gmftool
