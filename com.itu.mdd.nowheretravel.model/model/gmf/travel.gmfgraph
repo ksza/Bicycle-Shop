@@ -135,8 +135,21 @@
     <descriptors
         name="ParameterFigure">
       <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="ParameterName"/>
+          xsi:type="gmfgraph:Rectangle">
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGreen"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ParameterName"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="ParamterValue"/>
+      </actualFigure>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+      <accessors
+          figure="//@figures.0/@descriptors.9/@actualFigure/@children.1"/>
     </descriptors>
     <descriptors
         name="ConnectionFigure">
@@ -209,5 +222,10 @@
       accessor="//@figures.0/@descriptors.7/@accessors.0"/>
   <labels
       name="ParameterName"
-      figure="ParameterFigure"/>
+      figure="ParameterFigure"
+      accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels
+      name="ParameterValue"
+      figure="ParameterFigure"
+      accessor="//@figures.0/@descriptors.9/@accessors.1"/>
 </gmfgraph:Canvas>

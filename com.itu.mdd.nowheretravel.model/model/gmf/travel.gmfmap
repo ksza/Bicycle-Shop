@@ -50,6 +50,13 @@
             <features
                 href="../travel.ecore#//Parameter/name"/>
           </labelMappings>
+          <labelMappings
+              xsi:type="gmfmap:FeatureLabelMapping">
+            <diagramLabel
+                href="travel.gmfgraph#ParameterValue"/>
+            <features
+                href="../travel.ecore#//Parameter/value"/>
+          </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
               href="travel.gmftool#//@palette/@tools.1/@tools.4"/>
