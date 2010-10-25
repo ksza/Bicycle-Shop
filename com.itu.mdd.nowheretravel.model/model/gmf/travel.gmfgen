@@ -3,13 +3,54 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
+  <audits>
+    <categories
+        id="travel.audit"
+        name="Audit for Travel metamodel"
+        description="Validation constraints for the travel metamodel"
+        path="//@audits/@categories.0"
+        audits="//@audits/@rules.0 //@audits/@rules.1"/>
+    <rules
+        name="Item ingoing and outgoing connections"
+        description="An item must have at leas one ingoing and one outgoing connection"
+        id="travel.item.inout"
+        rule="//@expressionProviders/@providers.0/@expressions.4"
+        message="An item must have at leas one ingoing and one outgoing connection"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../travel.genmodel#//nowheretravel/Item"/>
+      </target>
+    </rules>
+    <rules
+        name="Car rental followed by car insurance"
+        description="A car rental must be directly followed by a car insurance"
+        id="travel.item.carInsurance"
+        rule="//@expressionProviders/@providers.0/@expressions.5"
+        message="A car rental must be directly followed by a car insurance"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../travel.genmodel#//nowheretravel/CarRental"/>
+      </target>
+    </rules>
+    <clientContexts
+        ruleTargets="//@audits/@rules.0/@target //@audits/@rules.1/@target"/>
+  </audits>
   <diagram
       visualID="1000"
       editPartClassName="TravelEditPart"
       itemSemanticEditPolicyClassName="TravelItemSemanticEditPolicy"
       canonicalEditPolicyClassName="TravelCanonicalEditPolicy"
       iconProviderPriority="Low"
-      validationProviderPriority="Low">
+      validationProviderPriority="Low"
+      validationEnabled="true"
+      validationDecorators="true"
+      validationDecoratorProviderPriority="Medium">
     <diagramRunTimeClass
         href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType
@@ -164,6 +205,35 @@
             href="../travel.genmodel#//nowheretravel/Travel/data"/>
         <childMetaFeature
             href="../travel.genmodel#//nowheretravel/Travel/data"/>
+        <modelElementInitializer
+            xsi:type="gmfgen:GenFeatureSeqInitializer">
+          <initializers
+              xsi:type="gmfgen:GenReferenceNewElementSpec">
+            <feature
+                href="../travel.genmodel#//nowheretravel/Data/parameters"/>
+            <newElementInitializers>
+              <initializers
+                  xsi:type="gmfgen:GenFeatureValueSpec"
+                  value="//@expressionProviders/@providers.0/@expressions.0">
+                <feature
+                    href="../travel.genmodel#//nowheretravel/Parameter/name"/>
+              </initializers>
+            </newElementInitializers>
+          </initializers>
+          <initializers
+              xsi:type="gmfgen:GenReferenceNewElementSpec">
+            <feature
+                href="../travel.genmodel#//nowheretravel/Data/parameters"/>
+            <newElementInitializers>
+              <initializers
+                  xsi:type="gmfgen:GenFeatureValueSpec"
+                  value="//@expressionProviders/@providers.0/@expressions.1">
+                <feature
+                    href="../travel.genmodel#//nowheretravel/Parameter/name"/>
+              </initializers>
+            </newElementInitializers>
+          </initializers>
+        </modelElementInitializer>
       </modelFacet>
     </topLevelNodes>
     <topLevelNodes
@@ -497,6 +567,9 @@
         <targetMetaFeature
             href="../travel.genmodel#//nowheretravel/Connection/targetNode"/>
       </modelFacet>
+      <creationConstraints
+          sourceEnd="//@expressionProviders/@providers.0/@expressions.2"
+          targetEnd="//@expressionProviders/@providers.0/@expressions.3"/>
     </links>
     <compartments
         visualID="7001"
@@ -870,6 +943,27 @@
   </propertySheet>
   <domainGenModel
       href="../travel.genmodel#/"/>
+  <expressionProviders>
+    <providers
+        xsi:type="gmfgen:GenExpressionInterpreter">
+      <expressions
+          body="'Travel date'"/>
+      <expressions
+          body="'Number of People'"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="not oclIsKindOf(End)"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="not oclIsKindOf(Start)"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.outgoingConnections->size()>0 and self.ingoingConnections->size()>0"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="outgoingConnections->select(targetNode.oclIsTypeOf(Insurance) and (targetNode.oclAsType(Insurance).type= InsuranceType::CarInsurance))->size()>0"/>
+    </providers>
+  </expressionProviders>
   <labelParsers
       extensibleViaService="true">
     <implementations

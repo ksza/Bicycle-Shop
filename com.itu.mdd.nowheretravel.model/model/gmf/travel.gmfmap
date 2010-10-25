@@ -31,6 +31,41 @@
     <ownedChild>
       <domainMetaElement
           href="../travel.ecore#//Data"/>
+      <domainInitializer
+          xsi:type="gmfmap:FeatureSeqInitializer">
+        <initializers
+            xsi:type="gmfmap:ReferenceNewElementSpec">
+          <feature
+              xsi:type="ecore:EReference"
+              href="../travel.ecore#//Data/parameters"/>
+          <newElementInitializers>
+            <initializers
+                xsi:type="gmfmap:FeatureValueSpec">
+              <feature
+                  xsi:type="ecore:EAttribute"
+                  href="../travel.ecore#//Parameter/name"/>
+              <value
+                  body="'Travel date'"/>
+            </initializers>
+          </newElementInitializers>
+        </initializers>
+        <initializers
+            xsi:type="gmfmap:ReferenceNewElementSpec">
+          <feature
+              xsi:type="ecore:EReference"
+              href="../travel.ecore#//Data/parameters"/>
+          <newElementInitializers>
+            <initializers
+                xsi:type="gmfmap:FeatureValueSpec">
+              <feature
+                  xsi:type="ecore:EAttribute"
+                  href="../travel.ecore#//Parameter/name"/>
+              <value
+                  body="'Number of People'"/>
+            </initializers>
+          </newElementInitializers>
+        </initializers>
+      </domainInitializer>
       <tool
           xsi:type="gmftool:CreationTool"
           href="travel.gmftool#//@palette/@tools.1/@tools.3"/>
@@ -213,6 +248,12 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="../travel.ecore#//Connection/targetNode"/>
+    <creationConstraints>
+      <sourceEnd
+          body="not oclIsKindOf(End)"/>
+      <targetEnd
+          body="not oclIsKindOf(Start)"/>
+    </creationConstraints>
   </links>
   <diagram>
     <diagramCanvas
@@ -224,4 +265,35 @@
     <palette
         href="travel.gmftool#//@palette"/>
   </diagram>
+  <audits
+      id="travel.audit"
+      name="Audit for Travel metamodel"
+      description="Validation constraints for the travel metamodel">
+    <audits
+        name="Item ingoing and outgoing connections"
+        description="An item must have at leas one ingoing and one outgoing connection"
+        id="travel.item.inout"
+        message="An item must have at leas one ingoing and one outgoing connection">
+      <rule
+          body="self.outgoingConnections->size()>0 and self.ingoingConnections->size()>0"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../travel.ecore#//Item"/>
+      </target>
+    </audits>
+    <audits
+        name="Car rental followed by car insurance"
+        description="A car rental must be directly followed by a car insurance"
+        id="travel.item.carInsurance"
+        message="A car rental must be directly followed by a car insurance">
+      <rule
+          body="outgoingConnections->select(targetNode.oclIsTypeOf(Insurance) and (targetNode.oclAsType(Insurance).type= InsuranceType::CarInsurance))->size()>0"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../travel.ecore#//CarRental"/>
+      </target>
+    </audits>
+  </audits>
 </gmfmap:Mapping>
