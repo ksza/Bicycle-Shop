@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Custom
+Bundle-SymbolicName: com.itu.mdd.nowheretravel.diagram.custom;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.itu.mdd.nowheretravel.diagram.custom.Activator
+Bundle-Vendor: ITU
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.itu.mdd.nowheretravel.diagram,
+ org.eclipse.gmf.runtime.emf.core,
+ org.eclipse.gmf.runtime.emf.commands.core,
+ org.eclipse.gmf.runtime.emf.ui.properties,
+ org.eclipse.gmf.runtime.diagram.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
