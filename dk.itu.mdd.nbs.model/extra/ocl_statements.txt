@@ -1,0 +1,24 @@
+1. It has one or two wheels
+self.parts->select(oclIsTypeOf(Wheel))->size() > 0 and self.parts->select(oclIsTypeOf(Wheel))->size() < 3
+
+2. It has an outer gear if it has two wheels and does not have an inner gear
+self.parts->select(oclIsTypeOf(Wheel))->size() = 2 and self.parts->select(oclIsTypeOf(Gear))->size() = 1
+
+3. If it has 2 wheels, it must have hand brakes
+self.parts->select(oclIsTypeOf(Wheel))->size() = 2 and self.parts->select(oclIsTypeOf(HandBrakes))->size() = 1
+
+4. All parts must be from manufacturer "Super Parts" and "Home Parts" OR "Handmade Parts"
+self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = self.parts->size() or self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = 0
+
+5. A bike must have a frame
+self.parts->select(oclIsTypeOf(Frame))->size() = 1
+
+6. A bike must have a pair of paddles
+self.parts->select(oclIsTypeOf(Pedals))->size() = 1
+
+7. A bike must have a saddle
+self.parts->select(oclIsTypeOf(Saddle))->size() = 1
+
+8. If it has 2 wheels, it must have handle bars
+self.parts->select(oclIsTypeOf(Wheel))->size() = 2 and self.parts->select(oclIsTypeOf(HandleBars))->size() = 1
+
