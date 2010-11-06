@@ -355,4 +355,113 @@
     <palette
         href="nbs.gmftool#//@palette"/>
   </diagram>
+  <audits
+      id="nbc.audit"
+      name="Audits for Nbc metamodel"
+      description="Validation constraints for the nbc metamodel">
+    <audits
+        name="One or two wheels"
+        description="A bicycle must have one or two wheels"
+        id="nbc.wheels.number"
+        message="A bicycle must have one or two wheels">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() > 0 and self.parts->select(oclIsTypeOf(Wheel))->size() &lt; 3"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Two wheels implies a gear"
+        description="If a bicycle has two wheels, than it must contain a gear"
+        id="nbc.wheels.gear"
+        message="If a bicycle has two wheels, than it must contain a gear">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Two wheel implies handbrakes"
+        description="If the bicycle has 2 wheels, it must have hand brakes"
+        id="nbs.wheels.brakes"
+        message="If the bicycle has 2 wheels, it must have hand brakes">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandBrakes))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Cannot combine super and hom parts with handmade parts"
+        description="All parts must be from manufacturers &quot;Super Parts&quot; and &quot;Home Parts&quot; OR from manufacturer &quot;Handmade Parts&quot;"
+        id="nbs.parts.combination"
+        message="Parts from &quot;Super Parts&quot; and &quot;Home Parts&quot; cannot be combined with &quot;Handmade Parts&quot;">
+      <rule
+          body="self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = self.parts->size() or self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = 0"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Bike frame"
+        description="A bike must have a frame"
+        id="nbc.frame"
+        message="A bike must have a frame">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Frame))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Paddles"
+        description="A bike must have a pair of paddles"
+        id="nbc.paddles"
+        message="A bike must have a pair of paddles">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Pedals))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Saddle"
+        description="A bike must have a saddle"
+        id="nbc.saddle"
+        message="A bike must have a saddle">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Saddle))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+    <audits
+        name="Handlebars"
+        description="If it has 2 wheels, it must have handle bars"
+        id="nbc.wheels.hadlebars"
+        message="If the bicycke has 2 wheels, it must have handle bars">
+      <rule
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandleBars))->size() = 1"/>
+      <target
+          xsi:type="gmfmap:DomainElementTarget">
+        <element
+            href="../nbs.ecore#//Bicycle"/>
+      </target>
+    </audits>
+  </audits>
 </gmfmap:Mapping>

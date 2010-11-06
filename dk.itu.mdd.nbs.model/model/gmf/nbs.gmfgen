@@ -3,13 +3,138 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
+  <audits>
+    <categories
+        id="nbc.audit"
+        name="Audits for Nbc metamodel"
+        description="Validation constraints for the nbc metamodel"
+        path="//@audits/@categories.0"
+        audits="//@audits/@rules.0 //@audits/@rules.1 //@audits/@rules.2 //@audits/@rules.3 //@audits/@rules.4 //@audits/@rules.5 //@audits/@rules.6 //@audits/@rules.7"/>
+    <rules
+        name="One or two wheels"
+        description="A bicycle must have one or two wheels"
+        id="nbc.wheels.number"
+        rule="//@expressionProviders/@providers.0/@expressions.0"
+        message="A bicycle must have one or two wheels"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Two wheels implies a gear"
+        description="If a bicycle has two wheels, than it must contain a gear"
+        id="nbc.wheels.gear"
+        rule="//@expressionProviders/@providers.0/@expressions.1"
+        message="If a bicycle has two wheels, than it must contain a gear"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Two wheel implies handbrakes"
+        description="If the bicycle has 2 wheels, it must have hand brakes"
+        id="nbs.wheels.brakes"
+        rule="//@expressionProviders/@providers.0/@expressions.2"
+        message="If the bicycle has 2 wheels, it must have hand brakes"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Cannot combine super and hom parts with handmade parts"
+        description="All parts must be from manufacturers &quot;Super Parts&quot; and &quot;Home Parts&quot; OR from manufacturer &quot;Handmade Parts&quot;"
+        id="nbs.parts.combination"
+        rule="//@expressionProviders/@providers.0/@expressions.3"
+        message="Parts from &quot;Super Parts&quot; and &quot;Home Parts&quot; cannot be combined with &quot;Handmade Parts&quot;"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Bike frame"
+        description="A bike must have a frame"
+        id="nbc.frame"
+        rule="//@expressionProviders/@providers.0/@expressions.4"
+        message="A bike must have a frame"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Paddles"
+        description="A bike must have a pair of paddles"
+        id="nbc.paddles"
+        rule="//@expressionProviders/@providers.0/@expressions.5"
+        message="A bike must have a pair of paddles"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Saddle"
+        description="A bike must have a saddle"
+        id="nbc.saddle"
+        rule="//@expressionProviders/@providers.0/@expressions.6"
+        message="A bike must have a saddle"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <rules
+        name="Handlebars"
+        description="If it has 2 wheels, it must have handle bars"
+        id="nbc.wheels.hadlebars"
+        rule="//@expressionProviders/@providers.0/@expressions.7"
+        message="If the bicycke has 2 wheels, it must have handle bars"
+        category="//@audits/@categories.0">
+      <target
+          xsi:type="gmfgen:GenDomainElementTarget"
+          contextSelector="//@audits/@clientContexts.0">
+        <element
+            href="../nbs.genmodel#//nowarebicycleshop/Bicycle"/>
+      </target>
+    </rules>
+    <clientContexts
+        ruleTargets="//@audits/@rules.0/@target //@audits/@rules.1/@target //@audits/@rules.2/@target //@audits/@rules.3/@target //@audits/@rules.4/@target //@audits/@rules.5/@target //@audits/@rules.6/@target //@audits/@rules.7/@target"/>
+  </audits>
   <diagram
       visualID="1000"
       editPartClassName="BicycleEditPart"
       itemSemanticEditPolicyClassName="BicycleItemSemanticEditPolicy"
       canonicalEditPolicyClassName="BicycleCanonicalEditPolicy"
       iconProviderPriority="Low"
-      validationProviderPriority="Low">
+      validationProviderPriority="Low"
+      validationEnabled="true"
+      validationDecorators="true"
+      validationDecoratorProviderPriority="Medium">
     <diagramRunTimeClass
         href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType
@@ -1018,6 +1143,35 @@
   </propertySheet>
   <domainGenModel
       href="../nbs.genmodel#/"/>
+  <expressionProviders>
+    <providers
+        xsi:type="gmfgen:GenExpressionInterpreter">
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() > 0 and self.parts->select(oclIsTypeOf(Wheel))->size() &lt; 3"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() = 1"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandBrakes))->size() = 1"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = self.parts->size() or self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = 0"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Frame))->size() = 1"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Pedals))->size() = 1"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Saddle))->size() = 1"/>
+      <expressions
+          xsi:type="gmfgen:GenConstraint"
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandleBars))->size() = 1"/>
+    </providers>
+  </expressionProviders>
   <labelParsers
       extensibleViaService="true">
     <implementations
