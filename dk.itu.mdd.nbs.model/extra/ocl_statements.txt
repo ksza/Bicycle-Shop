@@ -7,7 +7,7 @@ self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oc
 3. If it has 2 wheels, it must have hand brakes
 self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandBrakes))->size() = 1
 
-4. All parts must be from manufacturer "Super Parts" and "Home Parts" OR "Handmade Parts"
+4. All parts must be from manufacturers "Super Parts" and "Home Parts" OR from manufacturer "Handmade Parts"
 self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = self.parts->size() or self.parts->select(manufacturer = Manufacturers::HandMadeParts)->size() = 0
 
 5. A bike must have a frame
