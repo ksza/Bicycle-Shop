@@ -56,13 +56,52 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureWheelPriceFigure"
+            getterName="getFigureWheelNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5011"
+          editPartClassName="WheelManufacturerEditPart"
+          itemSemanticEditPolicyClassName="WheelManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="WheelManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureWheelManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5012"
+          editPartClassName="WheelPriceEditPart"
+          itemSemanticEditPolicyClassName="WheelPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="WheelPriceViewFactory"
+          readOnly="true"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureWheelPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -102,13 +141,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureOuterGearPriceFigure"
+            getterName="getFigureOuterGearNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5013"
+          editPartClassName="OuterGearManufacturerEditPart"
+          itemSemanticEditPolicyClassName="OuterGearManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="OuterGearManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureOuterGearManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5014"
+          editPartClassName="OuterGearPriceEditPart"
+          itemSemanticEditPolicyClassName="OuterGearPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="OuterGearPriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureOuterGearPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -148,13 +225,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureHandleBarsPriceFigure"
+            getterName="getFigureHandleBarsNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5015"
+          editPartClassName="HandleBarsManufacturerEditPart"
+          itemSemanticEditPolicyClassName="HandleBarsManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="HandleBarsManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureHandleBarsManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5016"
+          editPartClassName="HandleBarsPriceEditPart"
+          itemSemanticEditPolicyClassName="HandleBarsPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="HandleBarsPriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureHandleBarsPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -203,6 +318,25 @@
               href="../nbs.genmodel#//nowarebicycleshop/CustomerData/name"/>
         </modelFacet>
       </labels>
+      <labels
+          visualID="5017"
+          editPartClassName="CustomerDataAddressEditPart"
+          itemSemanticEditPolicyClassName="CustomerDataAddressItemSemanticEditPolicy"
+          notationViewFactoryClassName="CustomerDataAddressViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureCustomerDataAddressFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/CustomerData/address"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
     <topLevelNodes
         visualID="2005"
@@ -221,7 +355,17 @@
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="FLOW_LAYOUT"
           className="FrameFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FrameFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFramePriceFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameManufacturerFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameFrameTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameColorFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FrameFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFramePriceFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFramePriceFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFramePriceFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameManufacturerFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameManufacturerFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameManufacturerFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameFrameTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameFrameTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameFrameTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameColorFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameColorFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameColorFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFramePriceFigure() {&#xA;&#x9;&#x9;return fFigureFramePriceFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameManufacturerFigure() {&#xA;&#x9;&#x9;return fFigureFrameManufacturerFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameNameFigure() {&#xA;&#x9;&#x9;return fFigureFrameNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameFrameTypeFigure() {&#xA;&#x9;&#x9;return fFigureFrameFrameTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameColorFigure() {&#xA;&#x9;&#x9;return fFigureFrameColorFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FrameFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFramePriceFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameManufacturerFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameFrameTypeFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel fFigureFrameColorFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FrameFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.FlowLayout layoutThis = new org.eclipse.draw2d.FlowLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#xA;&#x9;layoutThis.setMajorAlignment(org.eclipse.draw2d.FlowLayout.ALIGN_LEFTTOP&#xA;);&#xA;&#x9;layoutThis.setMajorSpacing(5);&#xA;&#x9;layoutThis.setMinorSpacing(5);&#xA;&#x9;layoutThis.setHorizontal(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(org.eclipse.draw2d.ColorConstants.black);&#xA;&#x9;this.setBackgroundColor(org.eclipse.draw2d.ColorConstants.lightGray);&#xA;&#xA;this.setFont(THIS_FONT);&#xA;&#xA;&#xA;this.setPreferredSize(new org.eclipse.draw2d.geometry.Dimension(getMapMode().DPtoLP(15)&#xA;, getMapMode().DPtoLP(100)&#xA;));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFramePriceFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFramePriceFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFramePriceFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameManufacturerFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameManufacturerFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameManufacturerFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameNameFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameNameFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameNameFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameFrameTypeFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameFrameTypeFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameFrameTypeFigure);&#xA;&#xA;&#xA;&#xA;fFigureFrameColorFigure = new org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel();&#xA;fFigureFrameColorFigure.setText(&quot;&lt;...>&quot;);&#xA;&#xA;this.add(fFigureFrameColorFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFramePriceFigure() {&#xA;&#x9;&#x9;return fFigureFramePriceFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameManufacturerFigure() {&#xA;&#x9;&#x9;return fFigureFrameManufacturerFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameNameFigure() {&#xA;&#x9;&#x9;return fFigureFrameNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameFrameTypeFigure() {&#xA;&#x9;&#x9;return fFigureFrameFrameTypeFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel getFigureFrameColorFigure() {&#xA;&#x9;&#x9;return fFigureFrameColorFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font THIS_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), org.eclipse.swt.widgets.Display.getDefault().getSystemFont().getFontData()[0].getName(), 10, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;">
+        <attributes
+            xsi:type="gmfgen:StyleAttributes"
+            fixedFont="true"
+            fixedForeground="true"
+            fixedBackground="true"/>
+        <attributes
+            xsi:type="gmfgen:DefaultSizeAttributes"
+            width="15"
+            height="100"/>
+      </viewmap>
       <modelFacet>
         <metaClass
             href="../nbs.genmodel#//nowarebicycleshop/Frame"/>
@@ -240,13 +384,89 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureFramePriceFigure"
+            getterName="getFigureFrameNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5018"
+          editPartClassName="FrameManufacturerEditPart"
+          itemSemanticEditPolicyClassName="FrameManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="FrameManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureFrameManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5019"
+          editPartClassName="FramePriceEditPart"
+          itemSemanticEditPolicyClassName="FramePriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="FramePriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureFramePriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5029"
+          editPartClassName="FrameFrameTypeEditPart"
+          itemSemanticEditPolicyClassName="FrameFrameTypeItemSemanticEditPolicy"
+          notationViewFactoryClassName="FrameFrameTypeViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureFrameFrameTypeFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Frame/frameType"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5030"
+          editPartClassName="FrameColorEditPart"
+          itemSemanticEditPolicyClassName="FrameColorItemSemanticEditPolicy"
+          notationViewFactoryClassName="FrameColorViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureFrameColorFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Frame/color"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -286,13 +506,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigurePedalsPriceFigure"
+            getterName="getFigurePedalsNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5020"
+          editPartClassName="PedalsManufacturerEditPart"
+          itemSemanticEditPolicyClassName="PedalsManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="PedalsManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigurePedalsManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5021"
+          editPartClassName="PedalsPriceEditPart"
+          itemSemanticEditPolicyClassName="PedalsPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="PedalsPriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigurePedalsPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -332,13 +590,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureSaddlePriceFigure"
+            getterName="getFigureSaddleNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5022"
+          editPartClassName="SaddleManufacturerEditPart"
+          itemSemanticEditPolicyClassName="SaddleManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="SaddleManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureSaddleManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5023"
+          editPartClassName="SaddlePriceEditPart"
+          itemSemanticEditPolicyClassName="SaddlePriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="SaddlePriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureSaddlePriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -378,13 +674,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureHandBrakesPriceFigure"
+            getterName="getFigureHandBrakesNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5024"
+          editPartClassName="HandBrakesManufacturerEditPart"
+          itemSemanticEditPolicyClassName="HandBrakesManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="HandBrakesManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureHandBrakesManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5025"
+          editPartClassName="HandBrakesPriceEditPart"
+          itemSemanticEditPolicyClassName="HandBrakesPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="HandBrakesPriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureHandBrakesPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -424,13 +758,51 @@
             href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
-            getterName="getFigureInnerGearPriceFigure"
+            getterName="getFigureInnerGearNameFigure"
             figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
               href="../nbs.genmodel#//nowarebicycleshop/Part/name"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5026"
+          editPartClassName="InnerGearManufacturerEditPart"
+          itemSemanticEditPolicyClassName="InnerGearManufacturerItemSemanticEditPolicy"
+          notationViewFactoryClassName="InnerGearManufacturerViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureInnerGearManufacturerFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/manufacturer"/>
+        </modelFacet>
+      </labels>
+      <labels
+          visualID="5027"
+          editPartClassName="InnerGearPriceEditPart"
+          itemSemanticEditPolicyClassName="InnerGearPriceItemSemanticEditPolicy"
+          notationViewFactoryClassName="InnerGearPriceViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureInnerGearPriceFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Part/price"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
@@ -479,10 +851,30 @@
               href="../nbs.genmodel#//nowarebicycleshop/Parameter/name"/>
         </modelFacet>
       </labels>
+      <labels
+          visualID="5028"
+          editPartClassName="ParameterValueEditPart"
+          itemSemanticEditPolicyClassName="ParameterValueItemSemanticEditPolicy"
+          notationViewFactoryClassName="ParameterValueViewFactory"
+          elementIcon="true">
+        <diagramRunTimeClass
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+        <viewmap
+            xsi:type="gmfgen:ParentAssignedViewmap"
+            getterName="getFigureParameterValueFigure"
+            figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel"/>
+        <modelFacet
+            xsi:type="gmfgen:FeatureLabelModelFacet"
+            parser="//@labelParsers/@implementations.0">
+          <metaFeatures
+              href="../nbs.genmodel#//nowarebicycleshop/Parameter/value"/>
+        </modelFacet>
+      </labels>
     </topLevelNodes>
     <palette>
       <groups
-          title="nowarebicycleshop">
+          title="Parts"
+          collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Frame"
@@ -523,6 +915,11 @@
             title="HandleBars"
             description="Create new HandleBars"
             genNodes="//@diagram/@topLevelNodes.2"/>
+      </groups>
+      <groups
+          title="Data"
+          description=""
+          collapse="true">
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="CustomerData"
@@ -625,7 +1022,7 @@
       extensibleViaService="true">
     <implementations
         xsi:type="gmfgen:PredefinedParser"
-        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.8/@labels.0/@modelFacet //@diagram/@topLevelNodes.9/@labels.0/@modelFacet"/>
+        uses="//@diagram/@topLevelNodes.0/@labels.0/@modelFacet //@diagram/@topLevelNodes.0/@labels.1/@modelFacet //@diagram/@topLevelNodes.0/@labels.2/@modelFacet //@diagram/@topLevelNodes.1/@labels.0/@modelFacet //@diagram/@topLevelNodes.1/@labels.1/@modelFacet //@diagram/@topLevelNodes.1/@labels.2/@modelFacet //@diagram/@topLevelNodes.2/@labels.0/@modelFacet //@diagram/@topLevelNodes.2/@labels.1/@modelFacet //@diagram/@topLevelNodes.2/@labels.2/@modelFacet //@diagram/@topLevelNodes.3/@labels.0/@modelFacet //@diagram/@topLevelNodes.3/@labels.1/@modelFacet //@diagram/@topLevelNodes.4/@labels.0/@modelFacet //@diagram/@topLevelNodes.4/@labels.1/@modelFacet //@diagram/@topLevelNodes.4/@labels.2/@modelFacet //@diagram/@topLevelNodes.4/@labels.3/@modelFacet //@diagram/@topLevelNodes.4/@labels.4/@modelFacet //@diagram/@topLevelNodes.5/@labels.0/@modelFacet //@diagram/@topLevelNodes.5/@labels.1/@modelFacet //@diagram/@topLevelNodes.5/@labels.2/@modelFacet //@diagram/@topLevelNodes.6/@labels.0/@modelFacet //@diagram/@topLevelNodes.6/@labels.1/@modelFacet //@diagram/@topLevelNodes.6/@labels.2/@modelFacet //@diagram/@topLevelNodes.7/@labels.0/@modelFacet //@diagram/@topLevelNodes.7/@labels.1/@modelFacet //@diagram/@topLevelNodes.7/@labels.2/@modelFacet //@diagram/@topLevelNodes.8/@labels.0/@modelFacet //@diagram/@topLevelNodes.8/@labels.1/@modelFacet //@diagram/@topLevelNodes.8/@labels.2/@modelFacet //@diagram/@topLevelNodes.9/@labels.0/@modelFacet //@diagram/@topLevelNodes.9/@labels.1/@modelFacet"/>
   </labelParsers>
   <contextMenus
       context="//@diagram">

@@ -12,6 +12,19 @@
           name="FrameFigure">
         <layout
             xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="black"/>
+        <backgroundColor
+            xsi:type="gmfgraph:ConstantColor"
+            value="lightGray"/>
+        <preferredSize
+            dx="15"
+            dy="100"/>
+        <font
+            xsi:type="gmfgraph:BasicFont"
+            faceName=""
+            height="10"/>
         <children
             xsi:type="gmfgraph:Label"
             name="FramePriceFigure"

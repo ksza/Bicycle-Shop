@@ -13,9 +13,24 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#WheelPrice"/>
+            href="nbs.gmfgraph#WheelName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#WheelManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping"
+          readOnly="true">
+        <diagramLabel
+            href="nbs.gmfgraph#WheelPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -33,9 +48,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#OuterGearPrice"/>
+            href="nbs.gmfgraph#OuterGearName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#OuterGearManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#OuterGearPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -53,9 +82,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#HandleBarsPrice"/>
+            href="nbs.gmfgraph#HandleBarsName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandleBarsManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandleBarsPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -77,9 +120,16 @@
         <features
             href="../nbs.ecore#//CustomerData/name"/>
       </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#CustomerDataAddress"/>
+        <features
+            href="../nbs.ecore#//CustomerData/address"/>
+      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.8"/>
+          href="nbs.gmftool#//@palette/@tools.1/@tools.0"/>
       <diagramNode
           href="nbs.gmfgraph#CustomerData"/>
     </ownedChild>
@@ -93,9 +143,37 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#FramePrice"/>
+            href="nbs.gmfgraph#FrameName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#FrameManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#FramePrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#FrameFrameType"/>
+        <features
+            href="../nbs.ecore#//Frame/frameType"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#FrameColor"/>
+        <features
+            href="../nbs.ecore#//Frame/color"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -113,9 +191,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#PedalsPrice"/>
+            href="nbs.gmfgraph#PedalsName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#PedalsManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#PedalsPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -133,9 +225,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#SaddlePrice"/>
+            href="nbs.gmfgraph#SaddleName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#SaddleManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#SaddlePrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -153,9 +259,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#HandBrakesPrice"/>
+            href="nbs.gmfgraph#HandBrakesName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandBrakesManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandBrakesPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -173,9 +293,23 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="nbs.gmfgraph#InnerGearPrice"/>
+            href="nbs.gmfgraph#InnerGearName"/>
         <features
             href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#InnerGearManufacturer"/>
+        <features
+            href="../nbs.ecore#//Part/manufacturer"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#InnerGearPrice"/>
+        <features
+            href="../nbs.ecore#//Part/price"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -197,9 +331,16 @@
         <features
             href="../nbs.ecore#//Parameter/name"/>
       </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#ParameterValue"/>
+        <features
+            href="../nbs.ecore#//Parameter/value"/>
+      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.9"/>
+          href="nbs.gmftool#//@palette/@tools.1/@tools.1"/>
       <diagramNode
           href="nbs.gmfgraph#Parameter"/>
     </ownedChild>

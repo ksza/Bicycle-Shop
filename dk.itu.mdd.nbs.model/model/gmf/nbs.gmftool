@@ -7,7 +7,8 @@
       title="nowarebicycleshopPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
-        title="nowarebicycleshop">
+        title="Parts"
+        collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
           title="Frame"
@@ -80,6 +81,12 @@
         <largeIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
+    </tools>
+    <tools
+        xsi:type="gmftool:ToolGroup"
+        title="Data"
+        description=""
+        collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
           title="CustomerData"
