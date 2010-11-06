@@ -105,7 +105,7 @@ public class BicycleImpl extends EObjectImpl implements Bicycle {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date DELIVERY_DATE_EDEFAULT = null;
+	protected static final String DELIVERY_DATE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getDeliveryDate() <em>Delivery Date</em>}' attribute.
@@ -115,7 +115,7 @@ public class BicycleImpl extends EObjectImpl implements Bicycle {
 	 * @generated
 	 * @ordered
 	 */
-	protected Date deliveryDate = DELIVERY_DATE_EDEFAULT;
+	protected String deliveryDate = DELIVERY_DATE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,7 +204,7 @@ public class BicycleImpl extends EObjectImpl implements Bicycle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getDeliveryDate() {
+	public String getDeliveryDate() {
 		return deliveryDate;
 	}
 
@@ -213,8 +213,8 @@ public class BicycleImpl extends EObjectImpl implements Bicycle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeliveryDate(Date newDeliveryDate) {
-		Date oldDeliveryDate = deliveryDate;
+	public void setDeliveryDate(String newDeliveryDate) {
+		String oldDeliveryDate = deliveryDate;
 		deliveryDate = newDeliveryDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, NowarebicycleshopPackage.BICYCLE__DELIVERY_DATE, oldDeliveryDate, deliveryDate));
@@ -285,7 +285,7 @@ public class BicycleImpl extends EObjectImpl implements Bicycle {
 				setPrice((Double)newValue);
 				return;
 			case NowarebicycleshopPackage.BICYCLE__DELIVERY_DATE:
-				setDeliveryDate((Date)newValue);
+				setDeliveryDate((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
