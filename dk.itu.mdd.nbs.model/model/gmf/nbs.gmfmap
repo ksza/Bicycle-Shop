@@ -9,38 +9,59 @@
         href="../nbs.ecore#//Bicycle/parts"/>
     <ownedChild>
       <domainMetaElement
+          href="../nbs.ecore#//Wheel"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#WheelPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.1"/>
+      <diagramNode
+          href="nbs.gmfgraph#Wheel"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../nbs.ecore#//OuterGear"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#OuterGearPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.3"/>
+      <diagramNode
+          href="nbs.gmfgraph#OuterGear"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
           href="../nbs.ecore#//HandleBars"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandleBarsPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="nbs.gmftool#//@palette/@tools.0/@tools.7"/>
       <diagramNode
           href="nbs.gmfgraph#HandleBars"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//InnerGear"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.2"/>
-      <diagramNode
-          href="nbs.gmfgraph#InnerGear"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//HandBrakes"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.6"/>
-      <diagramNode
-          href="nbs.gmfgraph#HandBrakes"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -68,12 +89,99 @@
         href="../nbs.ecore#//Bicycle/parts"/>
     <ownedChild>
       <domainMetaElement
-          href="../nbs.ecore#//Wheel"/>
+          href="../nbs.ecore#//Frame"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#FramePrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.1"/>
+          href="nbs.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
-          href="nbs.gmfgraph#Wheel"/>
+          href="nbs.gmfgraph#Frame"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../nbs.ecore#//Pedals"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#PedalsPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.4"/>
+      <diagramNode
+          href="nbs.gmfgraph#Pedals"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../nbs.ecore#//Saddle"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#SaddlePrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.5"/>
+      <diagramNode
+          href="nbs.gmfgraph#Saddle"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../nbs.ecore#//HandBrakes"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#HandBrakesPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.6"/>
+      <diagramNode
+          href="nbs.gmfgraph#HandBrakes"/>
+    </ownedChild>
+  </nodes>
+  <nodes>
+    <containmentFeature
+        href="../nbs.ecore#//Bicycle/parts"/>
+    <ownedChild>
+      <domainMetaElement
+          href="../nbs.ecore#//InnerGear"/>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="nbs.gmfgraph#InnerGearPrice"/>
+        <features
+            href="../nbs.ecore#//Part/name"/>
+      </labelMappings>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="nbs.gmftool#//@palette/@tools.0/@tools.2"/>
+      <diagramNode
+          href="nbs.gmfgraph#InnerGear"/>
     </ownedChild>
   </nodes>
   <nodes>
@@ -94,58 +202,6 @@
           href="nbs.gmftool#//@palette/@tools.0/@tools.9"/>
       <diagramNode
           href="nbs.gmfgraph#Parameter"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//OuterGear"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.3"/>
-      <diagramNode
-          href="nbs.gmfgraph#OuterGear"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//Pedals"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.4"/>
-      <diagramNode
-          href="nbs.gmfgraph#Pedals"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//Saddle"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.5"/>
-      <diagramNode
-          href="nbs.gmfgraph#Saddle"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="../nbs.ecore#//Bicycle/parts"/>
-    <ownedChild>
-      <domainMetaElement
-          href="../nbs.ecore#//Frame"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="nbs.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="nbs.gmfgraph#Frame"/>
     </ownedChild>
   </nodes>
   <diagram>

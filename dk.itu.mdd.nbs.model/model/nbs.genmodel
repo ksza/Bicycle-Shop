@@ -40,6 +40,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Part/price"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Part/manufacturer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Part/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Part/name"/>
     </genClasses>
     <genClasses ecoreClass="nbs.ecore#//Frame">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Frame/frameType"/>
@@ -61,6 +62,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nbs.ecore#//Bicycle/parts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nbs.ecore#//Bicycle/customerData"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference nbs.ecore#//Bicycle/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Bicycle/price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//Bicycle/deliveryDate"/>
     </genClasses>
     <genClasses ecoreClass="nbs.ecore#//CustomerData">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute nbs.ecore#//CustomerData/name"/>

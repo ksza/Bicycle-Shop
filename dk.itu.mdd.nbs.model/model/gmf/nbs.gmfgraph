@@ -22,6 +22,10 @@
             text="&lt;...>"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="FrameNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="FrameFrameTypeFigure"
             text="&lt;...>"/>
         <children
@@ -37,6 +41,8 @@
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.2"/>
       <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.3"/>
+      <accessors
+          figure="//@figures.0/@descriptors.0/@actualFigure/@children.4"/>
     </descriptors>
     <descriptors
         name="WheelFigure">
@@ -53,11 +59,17 @@
             xsi:type="gmfgraph:Label"
             name="WheelManufacturerFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="WheelNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="InnerGearFigure">
@@ -74,11 +86,17 @@
             xsi:type="gmfgraph:Label"
             name="InnerGearManufacturerFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="InnerGearNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.2/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="OuterGearFigure">
@@ -95,11 +113,17 @@
             xsi:type="gmfgraph:Label"
             name="OuterGearManufacturerFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="OuterGearNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="PedalsFigure">
@@ -118,6 +142,10 @@
             text="&lt;...>"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="PedalsNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="PedalsPedalTypeFigure"
             text="&lt;...>"/>
       </actualFigure>
@@ -127,6 +155,8 @@
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
     </descriptors>
     <descriptors
         name="SaddleFigure">
@@ -145,6 +175,10 @@
             text="&lt;...>"/>
         <children
             xsi:type="gmfgraph:Label"
+            name="SaddleNameFigure"
+            text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
             name="SaddleSaddleTypeFigure"
             text="&lt;...>"/>
       </actualFigure>
@@ -154,6 +188,8 @@
           figure="//@figures.0/@descriptors.5/@actualFigure/@children.1"/>
       <accessors
           figure="//@figures.0/@descriptors.5/@actualFigure/@children.2"/>
+      <accessors
+          figure="//@figures.0/@descriptors.5/@actualFigure/@children.3"/>
     </descriptors>
     <descriptors
         name="HandBrakesFigure">
@@ -170,11 +206,17 @@
             xsi:type="gmfgraph:Label"
             name="HandBrakesManufacturerFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HandBrakesNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.6/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="HandleBarsFigure">
@@ -191,11 +233,17 @@
             xsi:type="gmfgraph:Label"
             name="HandleBarsManufacturerFigure"
             text="&lt;...>"/>
+        <children
+            xsi:type="gmfgraph:Label"
+            name="HandleBarsNameFigure"
+            text="&lt;...>"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
       <accessors
           figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
+      <accessors
+          figure="//@figures.0/@descriptors.7/@actualFigure/@children.2"/>
     </descriptors>
     <descriptors
         name="CustomerDataFigure">
@@ -279,13 +327,17 @@
       figure="FrameFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.1"/>
   <labels
-      name="FrameFrameType"
+      name="FrameName"
       figure="FrameFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.2"/>
   <labels
-      name="FrameColor"
+      name="FrameFrameType"
       figure="FrameFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.3"/>
+  <labels
+      name="FrameColor"
+      figure="FrameFigure"
+      accessor="//@figures.0/@descriptors.0/@accessors.4"/>
   <labels
       name="WheelPrice"
       figure="WheelFigure"
@@ -295,6 +347,10 @@
       figure="WheelFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.1"/>
   <labels
+      name="WheelName"
+      figure="WheelFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.2"/>
+  <labels
       name="InnerGearPrice"
       figure="InnerGearFigure"
       accessor="//@figures.0/@descriptors.2/@accessors.0"/>
@@ -302,6 +358,10 @@
       name="InnerGearManufacturer"
       figure="InnerGearFigure"
       accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels
+      name="InnerGearName"
+      figure="InnerGearFigure"
+      accessor="//@figures.0/@descriptors.2/@accessors.2"/>
   <labels
       name="OuterGearPrice"
       figure="OuterGearFigure"
@@ -311,6 +371,10 @@
       figure="OuterGearFigure"
       accessor="//@figures.0/@descriptors.3/@accessors.1"/>
   <labels
+      name="OuterGearName"
+      figure="OuterGearFigure"
+      accessor="//@figures.0/@descriptors.3/@accessors.2"/>
+  <labels
       name="PedalsPrice"
       figure="PedalsFigure"
       accessor="//@figures.0/@descriptors.4/@accessors.0"/>
@@ -319,9 +383,13 @@
       figure="PedalsFigure"
       accessor="//@figures.0/@descriptors.4/@accessors.1"/>
   <labels
-      name="PedalsPedalType"
+      name="PedalsName"
       figure="PedalsFigure"
       accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+  <labels
+      name="PedalsPedalType"
+      figure="PedalsFigure"
+      accessor="//@figures.0/@descriptors.4/@accessors.3"/>
   <labels
       name="SaddlePrice"
       figure="SaddleFigure"
@@ -331,9 +399,13 @@
       figure="SaddleFigure"
       accessor="//@figures.0/@descriptors.5/@accessors.1"/>
   <labels
-      name="SaddleSaddleType"
+      name="SaddleName"
       figure="SaddleFigure"
       accessor="//@figures.0/@descriptors.5/@accessors.2"/>
+  <labels
+      name="SaddleSaddleType"
+      figure="SaddleFigure"
+      accessor="//@figures.0/@descriptors.5/@accessors.3"/>
   <labels
       name="HandBrakesPrice"
       figure="HandBrakesFigure"
@@ -343,6 +415,10 @@
       figure="HandBrakesFigure"
       accessor="//@figures.0/@descriptors.6/@accessors.1"/>
   <labels
+      name="HandBrakesName"
+      figure="HandBrakesFigure"
+      accessor="//@figures.0/@descriptors.6/@accessors.2"/>
+  <labels
       name="HandleBarsPrice"
       figure="HandleBarsFigure"
       accessor="//@figures.0/@descriptors.7/@accessors.0"/>
@@ -350,6 +426,10 @@
       name="HandleBarsManufacturer"
       figure="HandleBarsFigure"
       accessor="//@figures.0/@descriptors.7/@accessors.1"/>
+  <labels
+      name="HandleBarsName"
+      figure="HandleBarsFigure"
+      accessor="//@figures.0/@descriptors.7/@accessors.2"/>
   <labels
       name="CustomerDataName"
       figure="CustomerDataFigure"
