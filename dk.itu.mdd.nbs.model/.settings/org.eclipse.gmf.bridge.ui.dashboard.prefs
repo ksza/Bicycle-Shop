@@ -1,0 +1,7 @@
+#Sat Nov 06 15:23:10 CET 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/dk.itu.mdd.nbs.model/model/nbs.genmodel
+gmf_dashboard/domainModel=platform\:/resource/dk.itu.mdd.nbs.model/model/nbs.ecore
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/dk.itu.mdd.nbs.model/model/gmf/nbs.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/dk.itu.mdd.nbs.model/model/gmf/nbs.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/dk.itu.mdd.nbs.model/model/gmf/nbs.gmftool
