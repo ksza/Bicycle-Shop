@@ -1,0 +1,58 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage{ucs}
+\usepackage{listings}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
+
+\usepackage[pdftex, pdfauthor={Karoly Szanto, Alvis Davidavicius, Roland Beta,
+Alina Arm}, pdftitle={Noware Bicycle Shop},
+    linkcolor=black, urlcolor=black, citecolor=black, bookmarks=true,
+    bookmarksopen=true, bookmarksnumbered=true, colorlinks=true, plainpages=false, pdfpagelabels]{hyperref}
+
+\RequirePackage{color,graphicx}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+\title{Noware Bicycle Shop}
+\author{
+K\'aroly Sz\'ant\'o \href{mailto:ksza@itu.dk}{ksza@itu.dk}\\
+Alvis Davidavicius \href{mailto:adav@itu.dk}{adav@itu.dk}\\
+Roland Beta \href{mailto:rolb@itu.dk}{rolb@itu.dk}\\
+Alina Arm \href{mailto:aarm@itu.dk}{aarm@itu.dk}
+}
+\date{December, 2010}
+
+\begin{document}
+\maketitle{}
+
+\clearpage
+
+% TOC
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\clearpage
+
+\input{introduction.tex}
+
+\input{conclusions.tex}
+
+\clearpage
+
+\appendix
+
+\input{appendix/appendix1.tex}
+
+\clearpage
+
+\nocite{*}
+\bibliographystyle{alpha}
+\bibliography{bibliography}
+
+\end{document}
