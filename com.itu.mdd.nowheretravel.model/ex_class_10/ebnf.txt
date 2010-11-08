@@ -1,0 +1,12 @@
+travel ::= travel_name (item)+ (connections)+
+
+travel_name ::= STRING
+
+item ::= (Flight | Hotel | CarRental | Insurance) item_id item_name
+
+Flight ::= (<flight_attribute> <white_space>)* | e
+ 
+<flight_attribute> ::= <start_location> <end_location> <time>
+<start_location> ::= startLocation <white_space> STRING <new_line>
+<end_location> ::= endLocation <white_space> STRING <new_line>
+<time> ::= time <white_space> STRING <new_line>
