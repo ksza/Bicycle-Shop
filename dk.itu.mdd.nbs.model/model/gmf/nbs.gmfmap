@@ -373,12 +373,12 @@
       </target>
     </audits>
     <audits
-        name="Two wheels implies a gear"
-        description="If a bicycle has two wheels, than it must contain a gear"
+        name="Two wheels implies that the bicycle can have a gear"
+        description="If a bicycle has two wheels, than it can contain a gear"
         id="nbc.wheels.gear"
-        message="If a bicycle has two wheels, than it must contain a gear">
+        message="If a bicycle has two wheels, than it can contain a gear">
       <rule
-          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() = 1"/>
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() &lt;= 1"/>
       <target
           xsi:type="gmfmap:DomainElementTarget">
         <element
