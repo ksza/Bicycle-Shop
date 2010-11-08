@@ -1,0 +1,37 @@
+Travel
+	Name STRING
+	Flight
+		Id ID
+		StartLocation STRING
+		EndLocation STRING
+		Time STRING
+	Flight
+		Id ID
+		StartLocation STRING
+		EndLocation STRING
+		Time STRING
+	Hotel
+		Id ID
+		Name STRING
+		Location STRING
+		StartDate STRING
+		EndDate STRING
+	CarRental
+		Id ID
+		CarName STRING
+		CompanyName STRING
+		Location STRING
+		StartDate STRING
+		EndDate STRING
+	Insurance
+		Id ID
+		StartDate STRING
+		EndDate STRING
+		Type NUMBER
+	CustomerData
+		STRING STRING
+		STRING STRING
+	Connections 
+		ID ID ID
+	Connections 
+		ID ID ID
