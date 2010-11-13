@@ -25,11 +25,11 @@
       </target>
     </rules>
     <rules
-        name="Two wheels implies that the bicycle can have a gear"
-        description="If a bicycle has two wheels, than it can contain a gear"
+        name="Two wheels implies a gear"
+        description="If a bicycle has two wheels, than it must contain a gear"
         id="nbc.wheels.gear"
         rule="//@expressionProviders/@providers.0/@expressions.1"
-        message="If a bicycle has two wheels, than it can contain a gear"
+        message="If a bicycle has two wheels, than it must contain a gear"
         category="//@audits/@categories.0">
       <target
           xsi:type="gmfgen:GenDomainElementTarget"
@@ -136,7 +136,7 @@
       validationDecorators="true"
       validationDecoratorProviderPriority="Medium">
     <diagramRunTimeClass
-        href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+        href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType
         xsi:type="gmfgen:MetamodelType"
         editHelperClassName="BicycleEditHelper"/>
@@ -154,7 +154,7 @@
         graphicalNodeEditPolicyClassName="WheelGraphicalNodeEditPolicy"
         createCommandClassName="WheelCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="WheelEditHelper"/>
@@ -178,7 +178,7 @@
           notationViewFactoryClassName="WheelNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureWheelNameFigure"
@@ -197,7 +197,7 @@
           notationViewFactoryClassName="WheelManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureWheelManufacturerFigure"
@@ -217,7 +217,7 @@
           readOnly="true"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureWheelPriceFigure"
@@ -239,7 +239,7 @@
         graphicalNodeEditPolicyClassName="OuterGearGraphicalNodeEditPolicy"
         createCommandClassName="OuterGearCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="OuterGearEditHelper"/>
@@ -263,7 +263,7 @@
           notationViewFactoryClassName="OuterGearNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureOuterGearNameFigure"
@@ -282,7 +282,7 @@
           notationViewFactoryClassName="OuterGearManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureOuterGearManufacturerFigure"
@@ -301,7 +301,7 @@
           notationViewFactoryClassName="OuterGearPriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureOuterGearPriceFigure"
@@ -323,7 +323,7 @@
         graphicalNodeEditPolicyClassName="HandleBarsGraphicalNodeEditPolicy"
         createCommandClassName="HandleBarsCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="HandleBarsEditHelper"/>
@@ -347,7 +347,7 @@
           notationViewFactoryClassName="HandleBarsNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandleBarsNameFigure"
@@ -366,7 +366,7 @@
           notationViewFactoryClassName="HandleBarsManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandleBarsManufacturerFigure"
@@ -385,7 +385,7 @@
           notationViewFactoryClassName="HandleBarsPriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandleBarsPriceFigure"
@@ -407,7 +407,7 @@
         graphicalNodeEditPolicyClassName="CustomerDataGraphicalNodeEditPolicy"
         createCommandClassName="CustomerDataCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="CustomerDataEditHelper"/>
@@ -431,7 +431,7 @@
           notationViewFactoryClassName="CustomerDataNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureCustomerDataNameFigure"
@@ -450,7 +450,7 @@
           notationViewFactoryClassName="CustomerDataAddressViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureCustomerDataAddressFigure"
@@ -472,7 +472,7 @@
         graphicalNodeEditPolicyClassName="FrameGraphicalNodeEditPolicy"
         createCommandClassName="FrameCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="FrameEditHelper"/>
@@ -506,7 +506,7 @@
           notationViewFactoryClassName="FrameNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFrameNameFigure"
@@ -525,7 +525,7 @@
           notationViewFactoryClassName="FrameManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFrameManufacturerFigure"
@@ -544,7 +544,7 @@
           notationViewFactoryClassName="FramePriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFramePriceFigure"
@@ -563,7 +563,7 @@
           notationViewFactoryClassName="FrameFrameTypeViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFrameFrameTypeFigure"
@@ -582,7 +582,7 @@
           notationViewFactoryClassName="FrameColorViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFrameColorFigure"
@@ -604,7 +604,7 @@
         graphicalNodeEditPolicyClassName="PedalsGraphicalNodeEditPolicy"
         createCommandClassName="PedalsCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="PedalsEditHelper"/>
@@ -628,7 +628,7 @@
           notationViewFactoryClassName="PedalsNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigurePedalsNameFigure"
@@ -647,7 +647,7 @@
           notationViewFactoryClassName="PedalsManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigurePedalsManufacturerFigure"
@@ -666,7 +666,7 @@
           notationViewFactoryClassName="PedalsPriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigurePedalsPriceFigure"
@@ -688,7 +688,7 @@
         graphicalNodeEditPolicyClassName="SaddleGraphicalNodeEditPolicy"
         createCommandClassName="SaddleCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="SaddleEditHelper"/>
@@ -712,7 +712,7 @@
           notationViewFactoryClassName="SaddleNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureSaddleNameFigure"
@@ -731,7 +731,7 @@
           notationViewFactoryClassName="SaddleManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureSaddleManufacturerFigure"
@@ -750,7 +750,7 @@
           notationViewFactoryClassName="SaddlePriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureSaddlePriceFigure"
@@ -772,7 +772,7 @@
         graphicalNodeEditPolicyClassName="HandBrakesGraphicalNodeEditPolicy"
         createCommandClassName="HandBrakesCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="HandBrakesEditHelper"/>
@@ -796,7 +796,7 @@
           notationViewFactoryClassName="HandBrakesNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandBrakesNameFigure"
@@ -815,7 +815,7 @@
           notationViewFactoryClassName="HandBrakesManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandBrakesManufacturerFigure"
@@ -834,7 +834,7 @@
           notationViewFactoryClassName="HandBrakesPriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureHandBrakesPriceFigure"
@@ -856,7 +856,7 @@
         graphicalNodeEditPolicyClassName="InnerGearGraphicalNodeEditPolicy"
         createCommandClassName="InnerGearCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="InnerGearEditHelper"/>
@@ -880,7 +880,7 @@
           notationViewFactoryClassName="InnerGearNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureInnerGearNameFigure"
@@ -899,7 +899,7 @@
           notationViewFactoryClassName="InnerGearManufacturerViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureInnerGearManufacturerFigure"
@@ -918,7 +918,7 @@
           notationViewFactoryClassName="InnerGearPriceViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureInnerGearPriceFigure"
@@ -940,7 +940,7 @@
         graphicalNodeEditPolicyClassName="ParameterGraphicalNodeEditPolicy"
         createCommandClassName="ParameterCreateCommand">
       <diagramRunTimeClass
-          href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="ParameterEditHelper"/>
@@ -964,7 +964,7 @@
           notationViewFactoryClassName="ParameterNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureParameterNameFigure"
@@ -983,7 +983,7 @@
           notationViewFactoryClassName="ParameterValueViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureParameterValueFigure"
@@ -1151,7 +1151,7 @@
           body="self.parts->select(oclIsTypeOf(Wheel))->size() > 0 and self.parts->select(oclIsTypeOf(Wheel))->size() &lt; 3"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
-          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() &lt;= 1"/>
+          body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsKindOf(Gear))->size() = 1"/>
       <expressions
           xsi:type="gmfgen:GenConstraint"
           body="self.parts->select(oclIsTypeOf(Wheel))->size() = 2 implies self.parts->select(oclIsTypeOf(HandBrakes))->size() = 1"/>
