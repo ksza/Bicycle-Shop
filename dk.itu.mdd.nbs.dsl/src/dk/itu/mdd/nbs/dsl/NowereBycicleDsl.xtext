@@ -9,7 +9,7 @@ Bicycle returns Bicycle:
 	{Bicycle}
 	'Bicycle' (ID)?
 	('deliveryDate' deliveryDate=EString)?
-	parts+=Part+
+	(parts+=Part)+
 	(customerData+=CustomerData)?
 	(parameters+=Parameter)*;
 
