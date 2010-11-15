@@ -1,0 +1,4 @@
+import dk::itu::mdd::nbs::dsl::nowereBycicleDsl;
+
+sortedGreetings(Model this) :
+	this.greetings.sortBy(g|g.name.toLowerCase());
