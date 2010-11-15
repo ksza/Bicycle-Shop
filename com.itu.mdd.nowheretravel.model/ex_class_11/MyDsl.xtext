@@ -1,0 +1,15 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model : elements+=Type*;
+
+Type : SimpleType | Entity;
+
+SimpleType : "datatype" name=ID; 
+
+Entity : 'entity' name=ID ('extends' extends=[Entity])? '(' 
+			properties+=Property* 
+		 ')';
+
+Property : 'property' name=ID ':' type=[SimpleType] (many?='[]')?;
