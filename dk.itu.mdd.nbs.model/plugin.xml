@@ -13,7 +13,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <package
             uri="http://itu.nowarebicycleshop.schemes/nbs.ecore"
-            class="NowareBicycleShop.NowareBicycleShopPackage"
+            class="dk.itu.mdd.nbs.model.nowarebicycleshop.NowarebicycleshopPackage"
             genModel="model/nbs.genmodel"/>
    </extension>
 

@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="nowarebicycleshop"
-    nsURI="http://itu.nowarebicycleshop.schemes/n.ecore" nsPrefix="n">
+    nsURI="http://itu.nowarebicycleshop.schemes/nbs.ecore" nsPrefix="nbs">
   <eClassifiers xsi:type="ecore:EClass" name="Node" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Part" abstract="true" eSuperTypes="#//Node">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"
