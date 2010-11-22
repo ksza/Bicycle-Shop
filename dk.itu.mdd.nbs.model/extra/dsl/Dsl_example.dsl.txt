@@ -1,0 +1,49 @@
+Bicycle
+	Price 100.0 
+	DeliveryDate "01-01-2011"
+	Frame
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someFrame'
+		FrameType CityFrame
+		Color Black
+	Wheel
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someWheel'
+	Wheel			
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someWheel'
+	HandBrakes 
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someHandBrakes'
+	HandleBars
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someHandBars'
+	Saddle
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someSaddle'
+		SaddleType ComfortSaddle
+	Pedals
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'somePedals'
+		PedalType ComfortPedals
+	InnerGear
+		Price 10.0
+		Manufacturer HandMadeParts
+		Name 'someInnerGear'
+	CustomerData 
+		Name 'someName' 
+		Address 'adress'
+		Parameter 'name' 'value'
+		Parameter 'name' 'value'
+		Parameter 'name'
+	Parameters
+		Parameter 'name' 'value'
+		Parameter 'name' 'value'
+		Parameter 'name'

@@ -1,0 +1,36 @@
+Bicycle 
+	price 10.0 
+	deliveryDate "2001"
+	parts 
+	{
+		Frame 1
+			{
+				price 10.0
+				manufacturer HandMadeParts
+				name 'a'
+				frameType CityFrame
+				color Black				
+			}
+		,
+		HandBrakes 2 
+		{
+			price 10.0
+			manufacturer HandMadeParts
+			name 'a'
+		}
+	} 	
+	
+	customerData 
+	{
+		CustomerData 'name' 
+		{
+			address 'a'
+			parameters 
+			{
+				Parameter 'n'
+				{
+					value 'v'
+				}
+			}
+		}
+	}
