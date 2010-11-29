@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<travel:Travel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:travel="http://dk.itu.mdd.travel" name="FamilyPackage">
+  <start outgoingConnections="//@connections.0 //@connections.3"/>
+  <end ingoingConnections="//@connections.2 //@connections.5"/>
+  <items xsi:type="travel:Flight" ingoingConnections="//@connections.0" outgoingConnections="//@connections.1" name="aFlight" destinationTown="Porto Rico" destinationCountry="Spain"/>
+  <items xsi:type="travel:Hotel" ingoingConnections="//@connections.1" outgoingConnections="//@connections.2" name="aHotel" hotelName="View hotel"/>
+  <items xsi:type="travel:CarRental" ingoingConnections="//@connections.3" outgoingConnections="//@connections.4" name="aCarrental"/>
+  <items xsi:type="travel:Insurance" ingoingConnections="//@connections.4" outgoingConnections="//@connections.5" name="anInsurance"/>
+  <connections sourceNode="//@start" targetNode="//@items.0"/>
+  <connections sourceNode="//@items.0" targetNode="//@items.1"/>
+  <connections sourceNode="//@items.1" targetNode="//@end"/>
+  <connections sourceNode="//@start" targetNode="//@items.2"/>
+  <connections sourceNode="//@items.2" targetNode="//@items.3"/>
+  <connections sourceNode="//@items.3" targetNode="//@end"/>
+  <input>
+    <parameters name="startDate"/>
+    <parameters name="numberOfPeople"/>
+    <parameters name="rentCar"/>
+    <parameters name="cprNumber"/>
+    <parameters name="numberofDays"/>
+    <parameters name="flightTime"/>
+  </input>
+</travel:Travel>

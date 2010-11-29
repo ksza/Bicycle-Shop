@@ -1,0 +1,92 @@
+«IMPORT soa»
+
+«EXTENSION templates::utils»
+
+«DEFINE JavaController FOR Process»
+	«FILE getControllerJavaName()+".java"»
+	package generated; 
+ 
+	import java.util.ArrayList; 
+	import java.util.List; 
+	import dk.itu.mdd.services.CarRentalService; 
+	import dk.itu.mdd.services.Service; 
+	import dk.itu.mdd.services.ServiceFactory; 
+	public class «getControllerJavaName()»{ 
+	       
+	  /** 
+	   * By executing this method, a travel package will be ordered for a concrete customer 
+	   * @param args 
+	   */ 
+	  public static void executeProcess(String[] args){ 
+	    System.out.println("Starting ordering package with name:«name»"); 	     
+	     
+		«EXPAND Node FOR this.getStart()» 
+	     
+	    System.out.println("Finish ordering package with name:«name»"); 
+	  } 
+	}
+	«ENDFILE»
+	«FILE getControllerJavaName()+"Test.java" TEST»
+	package test; 
+	import generated.«getControllerJavaName()»; 
+	public class «getControllerJavaName()»Test{ 
+	 
+	/** 
+	   * This main method simulates that a concrete user orders a travel package 
+	   * The data below is what the user has specified at the web 
+	   * When this program is executed, then the executeProcess method is called with these 
+	   * data, and the package is created 
+	   * @param args 
+	   */ 
+	  public static final void main(String args[]){ 
+	  System.out.println("Starting order simulation of a customer ordering a travel package");          
+	         
+	  String[] params = new String[«this.input.size»]; 
+		«FOREACH this.input AS data ITERATOR i» 
+		// Data for «data.name» 
+		  params[«i.counter0»] = "enter test data here «i.counter0»"; 
+		«ENDFOREACH»
+	  
+	  // Now execute the process ordering for the concrete customer 
+		«getControllerJavaName()» controller = new «getControllerJavaName()»(); 
+		controller.executeProcess(params);
+          
+	  System.out.println("End order simulation"); 
+	  } 
+	}
+	«ENDFILE»
+«ENDDEFINE»
+	
+«DEFINE Node FOR Start» 
+  	«EXPAND Connection FOREACH this.outgoingEdges» 
+«ENDDEFINE»
+
+«DEFINE Connection FOR Edge» 
+  «EXPAND Node FOR this.targetNode» 
+  «REM»Call recursively«ENDREM» 
+  «EXPAND Connection FOREACH this.targetNode.outgoingEdges» 
+«ENDDEFINE»
+
+«DEFINE Node FOR Node» 
+«ENDDEFINE» 
+
+«DEFINE Node FOR Service» 
+	  // 
+	  // Call service  «name.toFirstLower()» 
+	  // 
+	  // Map data to service 
+	  List «name.toFirstLower()»Params = new ArrayList(); 
+	  «FOREACH this.input AS param-» 
+	    «IF param.getProcessInputIndex()!=-1-» 
+	   
+	  «name.toFirstLower()»Params.add(args[«param.getProcessInputIndex()»]);  
+	// use value from process input 
+	    «ELSE-» 
+	      «name.toFirstLower()»Params.add("«param.value»");  
+	// use fixed value defined from SOA model 
+	    «ENDIF-»   
+	  «ENDFOREACH» 
+	  // Invoke service 
+	  Service «name.toFirstLower()» = ServiceFactory.getInstance().getService("«name»"); 
+	  «name.toFirstLower()».execute(«name.toFirstLower()»Params); 
+«ENDDEFINE»

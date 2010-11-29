@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soa:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soa="http://dk.itu.mdd.soa" name="FamilyPackage">
+  <input name="startDate"/>
+  <input name="numberOfPeople"/>
+  <input name="rentCar"/>
+  <input name="cprNumber"/>
+  <input name="numberofDays"/>
+  <input name="flightTime"/>
+  <edges targetNode="//@nodes.1" sourceNode="//@nodes.0"/>
+  <edges targetNode="//@nodes.2" sourceNode="//@nodes.1"/>
+  <edges targetNode="//@nodes.3" sourceNode="//@nodes.2"/>
+  <edges targetNode="//@nodes.4" sourceNode="//@nodes.0"/>
+  <edges targetNode="//@nodes.5" sourceNode="//@nodes.4"/>
+  <edges targetNode="//@nodes.3" sourceNode="//@nodes.5"/>
+  <nodes xsi:type="soa:Start" outgoingEdges="//@edges.0 //@edges.3"/>
+  <nodes xsi:type="soa:Service" ingoingEdges="//@edges.0" outgoingEdges="//@edges.1" name="FlightService">
+    <input name="destination" value="Spain : Porto Rico"/>
+    <input name="cprNumber" value=""/>
+    <input name="flightTime" value=""/>
+  </nodes>
+  <nodes xsi:type="soa:Service" ingoingEdges="//@edges.1" outgoingEdges="//@edges.2" name="HotelService">
+    <input name="roomType" value="1"/>
+    <input name="numberofDays" value=""/>
+    <input name="cprNumber" value=""/>
+  </nodes>
+  <nodes xsi:type="soa:End" ingoingEdges="//@edges.2 //@edges.5"/>
+  <nodes xsi:type="soa:Service" ingoingEdges="//@edges.3" outgoingEdges="//@edges.4" name="CarRentalService">
+    <input name="carType" value="0"/>
+    <input name="cprNumber" value=""/>
+    <input name="startDate" value=""/>
+    <input name="numberofDays" value=""/>
+    <output name="carReferenceNumber"/>
+  </nodes>
+  <nodes xsi:type="soa:Service" ingoingEdges="//@edges.4" outgoingEdges="//@edges.5" name="InsuranceService">
+    <input name="carReferenceNumber" value="123"/>
+  </nodes>
+</soa:Process>

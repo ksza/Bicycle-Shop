@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:soa="http://dk.itu.mdd.soa" xmi:id="_Jf1kENR8Ed68KZUwiNv2Cg" type="Soa" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_Jg4F4NR8Ed68KZUwiNv2Cg" type="2003">
+    <element xmi:type="soa:Start" href="FamilyPackage.soa#//@nodes.0"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4F4dR8Ed68KZUwiNv2Cg" x="235" y="375"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jg4F4tR8Ed68KZUwiNv2Cg" type="2004">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Jg4F59R8Ed68KZUwiNv2Cg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4F6NR8Ed68KZUwiNv2Cg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4F6dR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4F6tR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4F69R8Ed68KZUwiNv2Cg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4F7NR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4F7dR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Jg4F49R8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jg4F5NR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Jg4F5dR8Ed68KZUwiNv2Cg"/>
+    <element xmi:type="soa:Service" href="FamilyPackage.soa#//@nodes.1"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4F5tR8Ed68KZUwiNv2Cg" y="191" height="105"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jg4F7tR8Ed68KZUwiNv2Cg" type="2004">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Jg4F89R8Ed68KZUwiNv2Cg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4F9NR8Ed68KZUwiNv2Cg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4F9dR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4F9tR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4F99R8Ed68KZUwiNv2Cg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4F-NR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4F-dR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Jg4F79R8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jg4F8NR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Jg4F8dR8Ed68KZUwiNv2Cg"/>
+    <element xmi:type="soa:Service" href="FamilyPackage.soa#//@nodes.2"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4F8tR8Ed68KZUwiNv2Cg" x="11" y="80" height="86"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_Jg4F-tR8Ed68KZUwiNv2Cg" type="2002">
+    <element xmi:type="soa:End" href="FamilyPackage.soa#//@nodes.3"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4F-9R8Ed68KZUwiNv2Cg" x="261"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jg4F_NR8Ed68KZUwiNv2Cg" type="2004">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Jg4GAdR8Ed68KZUwiNv2Cg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4GAtR8Ed68KZUwiNv2Cg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4GA9R8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4GBNR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4GBdR8Ed68KZUwiNv2Cg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4GBtR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4GB9R8Ed68KZUwiNv2Cg"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Jg4F_dR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jg4F_tR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Jg4F_9R8Ed68KZUwiNv2Cg"/>
+    <element xmi:type="soa:Service" href="FamilyPackage.soa#//@nodes.4"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4GANR8Ed68KZUwiNv2Cg" x="370" y="180" height="170"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Jg4GCNR8Ed68KZUwiNv2Cg" type="2004">
+    <children xmi:type="notation:DecorationNode" xmi:id="_Jg4GDdR8Ed68KZUwiNv2Cg" type="5001"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4GDtR8Ed68KZUwiNv2Cg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4GD9R8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4GENR8Ed68KZUwiNv2Cg"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_Jg4GEdR8Ed68KZUwiNv2Cg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Jg4GEtR8Ed68KZUwiNv2Cg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Jg4GE9R8Ed68KZUwiNv2Cg"/>
+    </children>
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_Jg4GCdR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Jg4GCtR8Ed68KZUwiNv2Cg"/>
+    <styles xmi:type="notation:LineStyle" xmi:id="_Jg4GC9R8Ed68KZUwiNv2Cg"/>
+    <element xmi:type="soa:Service" href="FamilyPackage.soa#//@nodes.5"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Jg4GDNR8Ed68KZUwiNv2Cg" x="286" y="80" height="51"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_Jf1kEdR8Ed68KZUwiNv2Cg"/>
+  <element xmi:type="soa:Process" href="FamilyPackage.soa#/"/>
+</notation:Diagram>

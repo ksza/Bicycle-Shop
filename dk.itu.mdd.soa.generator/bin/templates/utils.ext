@@ -1,0 +1,18 @@
+import soa; 
+String getControllerJavaName(Process process): 
+  process.name+'Controller'; 
+
+Start getStart(Process process): 
+  process.nodes.typeSelect(Start).first();
+  
+Integer getProcessInputIndex(Parameter param): 
+  let p = (Process)param.eRootContainer: 
+    if p!=null then 
+      (let match = p.input.selectFirst(e|e.name==param.name): 
+        if(match != null) then 
+          p.input.indexOf(match) 
+        else 
+          -1 
+       )       
+    else 
+      -1;
