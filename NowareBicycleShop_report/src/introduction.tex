@@ -1,16 +1,77 @@
 \section{Introduction}
 \label{sec.introduction}
+\noindent The assignment is about creating an IT system for a fictive bicycle
+shop called \emph{Noware Bicycle Shop} (NBS), which specializes in selling
+customized handmade bicycles and have been in business for several years as an
+old-fashioned, physical shop. The main problem they are having is that it is
+difficult to demonstrate the possibilities of customizing bicycles for the
+customers just through magazines and catalogs. Secondly, the sales clerks spend
+a great amount of their time on supporting customers to choose valid
+configurations for their bikes. To alleviate the work of sales clerks and make
+it easier for the customers to customize bikes, NBS would like to introduce an
+IT solution with touch screen terminals where customers can easily create their
+model of new bikes. The clerks will make use of a textual interface to rapidly
+create bike configurations.
 
-\subsection{Define subsections like this}
+\subsection{Motivation}
+\noindent The group's motivation for creating this task is to use the modeling
+concepts learned through the Model Driven Development (MDD) lectures and apply
+it on a realistic scenario. By the completion of the assignment the members will
+have a better idea of how MDD can be used to model a physical shop and apply its
+terms in an IT environment.  The process will also give a general idea of how
+MDD can speed up the development process of the system.
 
-MDSD\footnote{Model Driven Software Development}
+\subsection{The Process}
+\noindent The project is important because it guides us to apply the
+technologies presented during the lectures, in order to gaining a deeper
+understanding of them. In order to fulfill our purpose, we are faced with a real
+world scenario,
+which we described earlier in this section.\\
 
-\emph{Ephasized text !!!}
+\noindent As the aim is to achieve a flexible and effective solution, we have
+addopted a model driven development approach, which helps in capturing domain
+knowledge described in terms of a \emph{Domain Specific Language} (DSL). This
+kind of approach results into a closer cooperation between the users of the
+system and the developers. More than that, the code is automatically generated
+based on the model. In the remainder of this section we will briefly describe
+our approach, relating to the main tasks we carried out:
+\begin{itemize}
+  \item construction of a conceptual data model to represent a single customized
+  bicycle, to be delivered to a single customer
+  \item construction and implementation of a logical model as an
+  \emph{EMF}\footnote{Eclipse Modeling Framework} model
+  \item definition of \emph{OCL}\footnote{Object Constraint Language}
+  constraints
+  \item development of a \emph{GMF}\footnote{Graphical Modeling Framework} based
+  \emph{graphical DSL}
+  \item development of a \emph{XText}\footnote{a Language Development Framework}
+  based \emph{textual editor}
+  \item creation of a \emph{M2T}\footnote{model to text} transformation using
+  Xpand\footnote{a language specialized on code generation based on EMF models}
+  to create a textural invoice that lists the bike configuration
+\end{itemize} 
 
-{\bf Bold text}
+\noindent The first three tasks were mandatory. They represent the foundation
+for the upcoming tasks. The EMF model represents the meta-model used for
+defining the abstract syntax of the DSL. In order to assure a good structural
+and semantical use of the DLS, constraints must be added to the model. We have
+achieved this by OCL. As the end user is both the customer and the sales clerk,
+we have decided to implement both a textual and a graphical concrete syntax. On
+one hand, the customers can use an intuitive and easy-to-use graphical
+syntax, running on touch screen enabled devices, which offers visualizations
+of the model's instances, to rapidly construct the desired bicycle. On one hand,
+the sales clerks can use the textual syntax to define instance models in a text-based language, with extended feature, like
+override the price of a bicycle part. In order to represent the textual syntax,
+we have created an \emph{EBNF}\footnote{Extended Backus Normal
+Form} grammar, which we later implemented in the XText editor. To implement the
+graphical syntax, we have used GMF, which maps the abstract syntax to a
+graphical notation for our DSL, resulting in a feature rich diagram editor.\\
 
-This is how you cite a previous work\cite{Pressman:2000}
-
-This is how you reference a label \ref{sec.conclusions}.
-
-Have fun! :)
+\noindent The report starts by describing the problem we are solving, the
+motivation and the steps we have take. Section \ref{sec.logical_model}
+presents the way we have defined and implemented our models. Section
+\ref{sec.ocl_constraints} presents the implementation of OCL constraints in the
+model. Section \ref{sec.gmf} describes how we achieved the graphical syntax.
+Section \ref{sec.xtext} presents the usage of XText in order to achieve textual
+syntax. Section \ref{sec.m2t} describes the model to text transformation.
+Finnaly, section \ref{sec.conclusions} concludes our work.

@@ -1,7 +1,16 @@
 \documentclass[10pt, a4paper]{article}
 
+\usepackage{array}
+\usepackage{times}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{natbib}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage[table]{xcolor}
 \usepackage{ucs}
 \usepackage{listings}
+\usepackage{subfigure}
 \usepackage{float}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
@@ -41,13 +50,28 @@ Alina Arm \href{mailto:aarm@itu.dk}{aarm@itu.dk}
 
 \input{introduction.tex}
 
+\input{sec.logical_model.tex}
+
+\input{sec.constraints.tex}
+
+\input{sec.graphical_dsl.tex}
+
+\input{sec.xtext.tex}
+
+\input{sec.m2t.tex}
+
 \input{conclusions.tex}
+
+\input{mandatory.tex}
 
 \clearpage
 
 \appendix
 
-\input{appendix/appendix1.tex}
+\input{appendix/ecore_model.tex}
+\input{appendix/custom_bicycles.tex}
+\input{appendix/ocl_errors.tex}
+\input{appendix/xtext.tex}
 
 \clearpage
 
