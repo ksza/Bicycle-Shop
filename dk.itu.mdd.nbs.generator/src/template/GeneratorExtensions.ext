@@ -1,0 +1,3 @@
+import nowarebicycleshop; 
+String getTitle(Bicycle bicycle):
+	'Invoice ' + bicycle.customerData.name;

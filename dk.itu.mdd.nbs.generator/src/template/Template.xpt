@@ -1,0 +1,51 @@
+«IMPORT nowarebicycleshop»
+«EXTENSION template::GeneratorExtensions»
+«DEFINE main FOR Bicycle»
+	«FILE getTitle() + ".html"»
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <title>«getTitle()»</title>
+	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	  <link rel="stylesheet" type="text/css" href="../static/style.css" />
+	</head>
+	<body>
+	  <div id="page-wrap">
+	    <h1>Invoice</h1>
+	    Customer Name: «customerData.name»<br/>
+	    Customer Address: «customerData.address»<br/>
+	    Delivery Date: «deliveryDate»<br/>
+	    Total Price: «price»<br/><br/>
+	    <table border="0" cellspacing="3">
+	    	<tr>
+	    		<td>Part name</dtd>
+	    		<td>Manifacturer</td>
+	    		<td>Price</td>
+	    	</tr>
+	    	«EXPAND part FOREACH this.parts»
+	    </table>
+	    <br/>
+	    <table border="0" cellspacing="3">
+	    	«EXPAND param FOREACH this.parameters»
+	    </table>	    
+	  </div>
+	</body>
+	</html>
+	«ENDFILE»
+«ENDDEFINE»
+
+«DEFINE part FOR Part»
+	  <tr>
+	  	<td>«this.name»</td>
+	  	<td>«this.manufacturer.toString()»</td>
+	  	<td>«this.price»</td>
+	  </tr>
+«ENDDEFINE»
+
+«DEFINE param FOR Parameter»
+	  <tr>
+	  	<td>«this.name»</td>
+	  	<td>«this.value»</td>
+	  </tr>
+«ENDDEFINE»
+    

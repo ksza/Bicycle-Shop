@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nbs:Bicycle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:nbs="http://itu.nowarebicycleshop.schemes/nbs.ecore" xsi:schemaLocation="http://itu.nowarebicycleshop.schemes/nbs.ecore nbs.ecore" price="123.0" deliveryDate="2010.01.04">
+  <parts xsi:type="nbs:Wheel" price="10.0" manufacturer="SuperParts" name="wheel"/>
+  <parts xsi:type="nbs:Wheel" price="10.0" manufacturer="SuperParts" name="wheel"/>
+  <parts xsi:type="nbs:OuterGear" price="20.0" manufacturer="SuperParts" name="outerGear"/>
+  <parts xsi:type="nbs:Pedals" price="10.0" manufacturer="SuperParts" name="pedals" pedalType="Sports"/>
+  <parts xsi:type="nbs:Saddle" price="10.0" manufacturer="SuperParts" name="saddle"/>
+  <parts xsi:type="nbs:HandBrakes" price="20.0" manufacturer="SuperParts" name="brakes"/>
+  <parts xsi:type="nbs:HandleBars" price="10.0" manufacturer="SuperParts" name="handleBars"/>
+  <customerData name="Alvis Davidavicius" address="Bjelkes Alle 46"/>
+  <parameters name="Custom param" value="Custom param value"/>
+</nbs:Bicycle>
