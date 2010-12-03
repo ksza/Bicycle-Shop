@@ -1,2 +1,77 @@
 \section{The Model}
 \label{sec.logical_model}
+
+\subsection{Conceptual Model}
+\noindent When creating the models firstly the highest level of 
+abstraction was used. The relationships between the important concepts 
+of the model were roughly described in a conceptual model (Figure 1). 
+The different parts and other characteristics were identified which 
+constitute a bicycle. There is a hierarchy between these parts which 
+also represents the associations between those objects. The conceptual 
+model can also be expressed by statements, e.g.: "A bicycle consists of 
+several bicycle parts. The parts can have common attributes which are 
+inherited from the super part type or have their own specific attributes 
+with the appropriate data type. 
+
+\subsection{Logical Model}
+\noindent The conceptual model was refined in the logical model (Figure 1) where
+all the important classes, relations and attributes were identified. 
+All the design choices were included by taking into consideration NBS' 
+description of a custom bicycle.\\
+
+\noindent The central class of the model is the Part class. It is an abstract
+class and all the concrete parts of the bicycle extend this. The abstract Node 
+class was introduced to conform to the convention of having a Node Super 
+Type presented by the exercises solutions during the course. 
+The Part has all the default attributes (price, manufacturer and id) 
+that all the parts of the bicycle are supposed to have. Enumeration types 
+were used to represent the various types of parts NBS provides to their 
+customers. These are defined in the FrameType, SaddleType, Color, 
+PedalTypes, Manufacturers classes.\\
+
+\noindent A note on the Color class; although the description states that the 
+frame can be painted in any color enumerating the different colors was 
+found to be the most suitable solution. In order to provide more 
+flexibility to the users of the system a Color could have been 
+represented by the three RGB values in a 0-255 range, but it was 
+after discussing this option the group found it too circumstantial 
+both to develop and the users to use as it would require an additional 
+tool to provide an RGB value to a certain color.\\
+
+\noindent A note on the InnerGear and OuterGear classes; as opposed 
+to using enumerations in previous cases, this time subtypes were used 
+for the reason that there are only two types of gears on bikes and 
+it is not expected to change. This implies that the Gear class is an 
+abstract class.\\
+
+\noindent A note on the Bicyle, CustomerData and Parameter classes; 
+the Bicycle class represents the customized bike itself which is 
+built up from the different parts. It has a Price attribute which 
+will be calculated by summing up the prices of individual parts. 
+CustomerData captures the basic information about the customer 
+ordering the bike and it was decided to be extracted from the 
+attributes of Bicycle to have a better modularity and overview of 
+the model. It is possible to extend the CustomerData and Bicycle 
+classes via the Parameter class which has name-value pairs in case 
+it is needed.\\
+
+\noindent References from Parts, CustomerData and Parameter to Bicycle 
+are of a composite relationship because all these information have to 
+be connected to an instance of a Bicycle.\\
+
+\subsection{Modeling Layers}
+
+\noindent Finally a Metamodel Layer Schema (Figure 3) shows the connections
+between the elements of the different meta levels. On the top M3 layer is
+the Ecore meta-meta model to which the M2 level meta model conforms. 
+M2 is the logical model developed for the NBS case and all its elements are
+derived from the Ecore model. E.g. the Frame is a type of EClass. There is 
+EReference between the Bicycle and the Part stating that the Bicycle can have
+more parts. The name in the CustomerData class is of EAttribute having a 
+String as an EDataType.\\
+The M1 level model represents the model of a concrete bicycle. This is 
+the level the employees of NBS and the customers work. This model also
+conforms to the higher M2 level and all the terms used here can be found 
+in the logical model.\\
+M0 level represents the physical bike which will be delivered to the
+customer who ordered it. 
