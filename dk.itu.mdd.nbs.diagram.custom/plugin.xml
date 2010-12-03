@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpolicyProviders">
+      <editpolicyProvider class="dk.itu.mdd.nbs.diagram.custom.EditPolicyProvider">
+         <Priority name="Medium">
+         </Priority>
+         
+         <context editparts="dk.itu.mdd.nbs.model.nowarebicycleshop.diagram.edit.parts.BicycleEditPart">
+		 </context>
+		 
+		 <object class="dk.itu.mdd.nbs.model.nowarebicycleshop.diagram.edit.parts.BicycleEditPart"
+		 	id="dk.itu.mdd.nbs.model.nowarebicycleshop.diagram.edit.parts.BicycleEditPart">
+		 </object>
+      </editpolicyProvider>
+   </extension>
+
+</plugin>
