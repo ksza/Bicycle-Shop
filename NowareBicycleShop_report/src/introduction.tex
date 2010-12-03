@@ -16,7 +16,7 @@ create bike configurations.
 \subsection{Motivation}
 \noindent The group's motivation for creating this task is to use the modeling
 concepts learned through the Model Driven Development (MDD) lectures and apply
-it on a realistic scenario. By the completion of the assignment the members will
+it on a realistic scenario. By completing the assignments the members will
 have a better idea of how MDD can be used to model a physical shop and apply its
 terms in an IT environment.  The process will also give a general idea of how
 MDD can speed up the development process of the system.
@@ -25,8 +25,7 @@ MDD can speed up the development process of the system.
 \noindent The project is important because it guides us to apply the
 technologies presented during the lectures, in order to gain a deeper
 understanding of them. In order to fulfill our purpose, we are faced with a real
-world scenario,
-which we described earlier in this section.\\
+world scenario, which we described earlier in this section.\\
 
 \noindent As the aim is to achieve a flexible and effective solution, we have
 adopted a model driven development approach, which helps in capturing domain
@@ -54,20 +53,21 @@ our approach, relating to the main tasks we carried out:
 \noindent The first three tasks were mandatory. They represent the foundation
 for the upcoming tasks. The EMF model represents the meta-model used for
 defining the abstract syntax of the DSL. In order to assure a good structural
-and semantical use of the DLS, constraints must be added to the model. We have
-achieved this by OCL. As the end user is both the customer and the sales clerk,
-we have decided to implement both a textual and a graphical concrete syntax. On
-one hand, the customers can use an intuitive and easy-to-use graphical
-syntax, running on touch screen enabled devices, which offers visualizations
-of the model's instances, to rapidly construct the desired bicycle. On one hand,
-the sales clerks can use the textual syntax to define instance models in a text-based language, with extended feature, like
-override the price of a bicycle part. In order to represent the textual syntax,
-we have created an \emph{EBNF}\footnote{Extended Backus Normal
-Form} grammar, which we later implemented in the XText editor. To implement the
-graphical syntax, we have used GMF, which maps the abstract syntax to a
-graphical notation for our DSL, resulting in a feature rich diagram editor.\\
+and semantical use of the DSL, constraints must be added to the model. We have
+achieved this by using OCL. As the end user is both the customer and the sales
+clerk, we have decided to implement both a textual and a graphical concrete syntax. On
+one hand, the customer can use an intuitive and easy-to-use graphical
+syntax, running on touch screen enabled devices that offer visualizations
+of the model's instances to rapidly construct the desired bicycle. On the other
+hand, the sales clerk can use the textual syntax to define instance models in a
+text-based language, witch allows using extended features such as overriding
+the price of bicycle parts. In order to represent the textual syntax, we have
+created an \emph{EBNF}\footnote{Extended Backus Normal Form} grammar, which we later 
+implemented in the XText editor. To implement the graphical syntax, we have used GMF, 
+which maps the abstract syntax to a graphical notation for our DSL, resulting in
+a feature rich diagram editor.\\
 
-\noindent The report starts by describing the problem we are solving, the
+\noindent The report starts by describing the problem, the
 motivation and the steps we have taken. Section \ref{sec.logical_model}
 presents the way we have defined and implemented our models. Section
 \ref{sec.ocl_constraints} presents the implementation of OCL constraints in the
