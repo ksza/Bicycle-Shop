@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.Request;
 import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.diagram.ui.requests.DuplicateRequest;
 import org.eclipse.gmf.runtime.notation.impl.DiagramImpl;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.xpand2.XpandExecutionContextImpl;
@@ -44,58 +45,65 @@ public class OpenEditPolicy extends org.eclipse.gmf.runtime.diagram.ui.editpolic
 	}
 
 	@Override
-	public Command getCommand(Request request) {
-		return new Command() {
+	public Command getCommand(final Request request) {
+		
+		if(request instanceof DuplicateRequest) {
+			return new Command() {
 
-			@Override
-			public void execute() {
-				System.out.println("[NowhareBicycleShop] Invoice Generation ...");
-				
-				/* get the Bicycle instance under the edited diagram */
-				Bicycle bicycle = (Bicycle) ((DiagramImpl)editpart.getModel()).getElement();
+				@Override
+				public void execute() {
+					System.out.println(request);
 
-				/* configure the outlet to be used by the generator */
-				OutputImpl output = new OutputImpl();
-				Outlet outlet = new Outlet(INVOICES_DIRECTORY);
-				outlet.setOverwrite(true);
-				output.addOutlet(outlet);
+					System.out.println("[NowhareBicycleShop] Invoice Generation ...");
 
-				/* create an execution context for the XPand and XTend programmatic execution */
-				Map<String, Variable> globalVariablesMockMap = new HashMap<String, Variable>();
-				
-				/* create the execution context based on our custom Outlet and mocked_variables_map */
-				XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(output, null, globalVariablesMockMap, null, null);
-				
-				/* create a mock EMFRegistry to contain our meta_model and the ecore_metamodel */
-				EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
-					@Override
-					protected EPackage[] allPackages() {
-						return new EPackage[] { NowarebicycleshopPackage.eINSTANCE, EcorePackage.eINSTANCE };
+					/* get the Bicycle instance under the edited diagram */
+					Bicycle bicycle = (Bicycle) ((DiagramImpl)editpart.getModel()).getElement();
+
+					/* configure the outlet to be used by the generator */
+					OutputImpl output = new OutputImpl();
+					Outlet outlet = new Outlet(INVOICES_DIRECTORY);
+					outlet.setOverwrite(true);
+					output.addOutlet(outlet);
+
+					/* create an execution context for the XPand and XTend programmatic execution */
+					Map<String, Variable> globalVariablesMockMap = new HashMap<String, Variable>();
+
+					/* create the execution context based on our custom Outlet and mocked_variables_map */
+					XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(output, null, globalVariablesMockMap, null, null);
+
+					/* create a mock EMFRegistry to contain our meta_model and the ecore_metamodel */
+					EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
+						@Override
+						protected EPackage[] allPackages() {
+							return new EPackage[] { NowarebicycleshopPackage.eINSTANCE, EcorePackage.eINSTANCE };
+						}
+					};
+					/* register the mock registry in the execution context */
+					executionContext.registerMetaModel(metamodel);
+
+					XpandFacade facade = XpandFacade.create(executionContext);
+					String xpandTemplatePath = "template::InvoiceTemplate::main";
+					/* launch the M2T transformation ! */
+					facade.evaluate(xpandTemplatePath, bicycle);
+
+					try {
+						XtendFacade extendFacade = XtendFacade.create(executionContext, "template::Extensions");
+						/* get the absolute path to the generated file */
+						String invoiceFile = INVOICES_DIRECTORY + "/" + (String)extendFacade.call("getTitle", bicycle) + INVOICE_TYPE;
+
+						/* show the invoice in an external browser */
+						PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(
+								new URL("file:////" + invoiceFile)
+						);
 					}
-				};
-				/* register the mock registry in the execution context */
-				executionContext.registerMetaModel(metamodel);
-
-				XpandFacade facade = XpandFacade.create(executionContext);
-				String xpandTemplatePath = "template::InvoiceTemplate::main";
-				/* launch the M2T transformation ! */
-				facade.evaluate(xpandTemplatePath, bicycle);
-				
-				try {
-					XtendFacade extendFacade = XtendFacade.create(executionContext, "template::Extensions");
-					/* get the absolute path to the generated file */
-					String invoiceFile = INVOICES_DIRECTORY + "/" + (String)extendFacade.call("getTitle", bicycle) + INVOICE_TYPE;
-					
-					/* show the invoice in an external browser */
-					PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(
-							new URL("file:////" + invoiceFile)
-					);
+					catch (Exception err) {
+						err.printStackTrace();
+					}
 				}
-				catch (Exception err) {
-					err.printStackTrace();
-				}
-			}
-		};
+			};
+		} else {
+			return super.getCommand(request);
+		}
 	}
 
 	@Override
