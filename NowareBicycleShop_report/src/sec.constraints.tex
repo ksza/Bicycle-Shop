@@ -9,11 +9,13 @@ requirements for that to realize. There has to be a language to
 formally specify the constraints, an engine to execute them and show 
 the constraint violations in the development environment. The language 
 for defining constraints on metamodels is OCL (Object Constraint 
-Language). The constraints were implemented as invariants in the Ecore 
+Language). 
+\noindent The constraints were implemented as invariants in the Ecore 
 model and were executed in the runtime workbench on newly created models. 
 OCL Constraints are listed in Appendix C and validation errors shown 
-in the Appendix Figure 10, 11, 12. As progressing in the assignment 
-these OCL constraints were implemented in the GMF model too, so the 
+in the Appendix Figure \ref{fig.ocl_bike_errors}, \ref{fig.ocl_ecore_handbreaks}. 
+\noindent As progressing in the assignment these OCL 
+constraints were implemented in the GMF model too, so the 
 model can be validated in the GMF Diagram editor, which is meant 
 to be used by the customers. However with this approach having it 
 both in the Ecore model and in GMF the error messages were duplicated 

@@ -4,7 +4,7 @@
 \subsection{Conceptual Model}
 \noindent When creating the models firstly the highest level of 
 abstraction was used. The relationships between the important concepts 
-of the model were roughly described in a conceptual model (Figure 1). 
+of the model were roughly described in a conceptual model (Figure \ref{fig.conceptual_model}). 
 The different parts and other characteristics were identified which 
 constitute a bicycle. There is a hierarchy between these parts which 
 also represents the associations between those objects. The conceptual 
@@ -14,8 +14,8 @@ inherited from the super part type or have their own specific attributes
 with the appropriate data type. 
 
 \subsection{Logical Model}
-\noindent The conceptual model was refined in the logical model (Figure 1) where
-all the important classes, relations and attributes were identified. 
+\noindent The conceptual model was refined in the logical model (Figure \ref{fig.ecore_model})
+where all the important classes, relations and attributes were identified. 
 All the design choices were included by taking into consideration NBS' 
 description of a custom bicycle.\\
 
@@ -61,7 +61,7 @@ be connected to an instance of a Bicycle.\\
 
 \subsection{Modeling Layers}
 
-\noindent Finally a Metamodel Layer Schema (Figure 3) shows the connections
+\noindent Finally a Metamodel Layer Schema (Figure \ref{fig.metamodel_layers_schema}) shows the connections
 between the elements of the different meta levels. On the top M3 layer is
 the Ecore meta-meta model to which the M2 level meta model conforms. 
 M2 is the logical model developed for the NBS case and all its elements are
@@ -76,4 +76,5 @@ in the logical model.\\
 M0 level represents the physical bike which will be delivered to the
 customer who ordered it.\\
 There are three custom bicycle models created based on the Ecore model. These
-are Figure 4, Figure 5 and Figure 6 in the Appendix.
+are Figure \ref{fig.emf_city_bike}, \ref{fig.emf_sport_model}, \ref{fig.gmf_unicycle_model} in
+the Appendix.
