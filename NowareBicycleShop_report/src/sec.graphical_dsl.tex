@@ -1,2 +1,24 @@
 \section{Graphical DSL using GMF}
 \label{sec.gmf}
+
+\noindent
+The Graphical Modeling Framework makes it possible to provide a 
+graphical visualization of the model through a graphical editor. 
+The user is shown a canvas where elements of the model can be dragged 
+and dropped from the palette. This is a more intuitive way to interact 
+with the system for customers of NBS.\\
+At this point there are two ways to create a new bicycle model. 
+Either by creating a tree based editor where the user has to add 
+parts of the bike as children to the Bicycle node. The second option 
+is by using the GMF Editor where the user selects the part (which also 
+has an appropriate icon) on the palette and drops it on the canvas.
+There are no connections between the certain parts of the bicycle, 
+because they can be placed in any order and different bicycles might 
+have different amount of parts.\\
+The user has the possibility to change the name of a part but changing 
+the price for obvious reasons is only possible in the Properties view. 
+For that reason in the final implementation the Properties view should 
+not be shown to the customer. The OCL Constraints as mentioned earlier 
+are implemented in GMF, specifically in the gmfmap as Audit Rules.\\
+//TODO: Feature initializers
+//TODO: Modeling constraints
