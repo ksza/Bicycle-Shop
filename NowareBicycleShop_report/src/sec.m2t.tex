@@ -1,32 +1,28 @@
 \section{Model to Text Transformation using XPand}
 \label{sec.m2t}
-In the implementation of our NBS, we offer the customer the possibility of
-generating an invoice for his custom bicycle. The invoice will contain the name
-and address of the customer, desired delivery date, total price of the bicycle,
-a detailed list of the parts the bike is composed of and additional parameters.
-In order to achieve this functionality we have decided to implement a transformation from a custom bicycle model to a textual representation (we have decided on the \emph{HTML}
-format). The feature is offered only for the customers of the NBS, therefore
-accessible from the graphical editor. When the user has finished
-creating the custom bike and would like to finalize the order, he can invoke the
-contextual menu on the bicycle diagram and select the option ``Edit/Duplicate''.
-This will generate an invoice in HTML based on the current configuration and
-will automatically open it in a browser. The above described scenario is depicted
-in figure \ref{fig.xpand.usecase}. The code for the extensions template is
-shown in appendix \ref{appendix.xpand.implementation}.
+\noindent In the implementation of NBS, we enable the possibility of
+generating an invoice for a custom bicycle. The invoice will contain the
+customer details, delivery date, the total price, a detailed
+list of the bicycle parts and additional parameters. In
+order to achieve this functionality we have implemented a transformation from a
+bicycle model to a textual representation in the \emph{HTML} format. The
+feature is accessible from the graphical editor. When the user has finished
+creating the bicycle and would like to finalize the order, he can invoke the
+contextual menu on the bicycle diagram and select the option ``Edit/Duplicate''. This will generate the current configuration invoice and open it in a browser. The above described scenario is depicted in figure \ref{fig.xpand.usecase}. The
+code for the extensions template is shown in appendix
+\ref{appendix.xpand.implementation}.\\
 
-To implement the M2T Transformation, we have used \emph{XPand}. We have
-implemented the templates in the same project with the EMF model. To be able to
+\noindent To implement the M2T Transformation, we have used \emph{XPand}. We
+have implemented the templates in the same project with the EMF model. To be able to
 do this, the first step was to enable the Xtent/Xpand nature on the model
 project. Afterwards, we defined the two template files, \emph{Extensions.ext}
 and \emph{InvoiceTemplate.xpt}, in the \emph{model/template} package. This way
 both templates are able to import and work with the \emph{nowarebicycleshop}
 model. Figure \ref{fig.xpand.model_xpand_invoice} illustrates the
 InvoiceTemplate file and the resulting invoice a M2T transformation applied to
-the presented concrete model. A snippet from the ecore model diagram is also
-shown in the figure to create a clearer overview of how the elements are
-related.\\
+the presented concrete model.\\
 
-\emph{Extensions.ext} is an Xtent template which defines three utility
+\noindent \emph{Extensions.ext} is an Xtent template which defines three utility
 methods for the Xpand template: \emph{getTitle()} which creates the file name
 for the invoice, \emph{getDocumentHeader()} to crate the HTML header and
 \emph{getDocumentFooter} to create the HTML footer. \emph{InvoiceTemplate.xpt}
@@ -41,9 +37,9 @@ fills it with the followings:
   \item for each part in the bicycle model, calls the \emph{part} template
   filling in information regarding each bicycle part
   \item document footer provided by \emph{getDocumentFooter}
-\end{itemize}
+\end{itemize}\\
 
-After implementing the templates, we have created the
+\noindent After implementing the templates, we have created the
 \emph{dk.itu.mdd.nbs.diagram.custom} plug-in as a GMF extension point, in order
 to get notified when an edit action occurs on the \emph{bicycle diagram}. The
 functionality is implemented in the \emph{EditPolicyProvider} and
@@ -62,7 +58,7 @@ the following actions are taken to fulfill the transformation:
   \item register the mock registry in the execution context
   \item launch the M2T transformation using the \emph{XpandFacade} class
   \item show the invoice in an external browser
-\end{itemize}
+\end{itemize}\\
 
-We have gained deeper technical background about Xtent/Xpand from
+\noindent We have gained deeper technical background about Xtent/Xpand from
 \cite{XPAND_EXAMPLE}.

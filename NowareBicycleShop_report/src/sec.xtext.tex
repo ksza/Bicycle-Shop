@@ -4,13 +4,13 @@
 \noindent
 To help the sales clerk in their everyday tasks we have developed a textual DSL
 using \emph{XText} framework. A textual language can speed up the process of
-creating bicycle models, user and other data. Because of the nature of text files,
+creating bicycle models and user data. Because of the nature of text files,
 sales clerk can easily copy and edit already created model instances.\\
 
 \noindent
-To describe a textual DSL we have used an Extended Backus-Naur Form (EBNF)
-metalanguage notations. Our textual DSL is external, meanig that it is
-completely new, not extending an existing language. As we have identified the entities,
+We have used an Extended Backus-Naur Form (EBNF)
+metalanguage notations to describe a textual DSL. Our textual DSL is external,
+meanig that it is new, not extending an existing language. As we have identified the entities,
 attributes and relations in the \emph{Ecore} meta-model, we use
 \emph{XText} to generate the textual DSL. It creates a grammar with rules for
 our entities, abstract types, propteries, relations, etc. We build upon this grammar and modify it for our needs. The final \emph{XText} grammar definition is listed in Figure
@@ -18,8 +18,8 @@ our entities, abstract types, propteries, relations, etc. We build upon this gra
 
 \noindent
 The target user for the language is the sales clerk and he might not
-necessarily have any programming experience, so we want the language to seem
-natural and helpful for the user. Therefore statement terminators, such as symbols or line feeds, are not
+have any programming experience, so we want the language to seem
+natural. Therefore statement terminators, such as symbols or line feeds, are not
 used. The grammar is rich, having types for entities, attribute
 names, enumerators and other details. This is used to provide context assistance
 in the tools.\\
@@ -27,8 +27,8 @@ in the tools.\\
 \noindent
 When using the textual DSL, the editor executes syntax checking (Figure
 \ref{fig.dsl_empty_model}) and suggests code completion (Figures \ref{fig.dsl_autocomplete_parts},
-\ref{fig.dsl_autocomplete_values}), so the user does not have to type full words and can get help on what parts are left to define.
-The grammar is simple, so it is fast to enter while keeping it perspicuous.
-Excluding separators from the grammar further simplifies the layout.
+\ref{fig.dsl_autocomplete_values}). The user also gets help on what parts
+are left to define. The grammar is simple and fast to enter while keeping it
+perspicuous. Excluding separators from the grammar further simplifies the layout.
 Moreover, the keywords and class names are differentiated with syntax
 highlighting.\\
