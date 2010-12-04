@@ -2,19 +2,33 @@
 \label{sec.xtext}
 
 \noindent
-Defining bicycle models textually helps the sales clerks to 
-speed up the creation of bicycle models. In this manner clerks 
-can create models by copying, eventually editing 
-an already existing model. When creating models from scratch 
-the editor provides code completion so the user does not have to 
-type full words or can get help what parts are left to define.\\
-The grammar we have developed was meant to be as simple
-so it is fast to enter while keeping it perspicuous. There are no
-brackets needed for separating elements which further simplifies 
-the layout. The keywords and class names are differentiated with 
-syntaxt highlighting as standard Java code. 
-The Xtext Grammar is listed in Figure \ref{appendix.xtext}.
-Syntax checking example in Figure \ref{fig.dsl_empty_model}.
-Autocomplete examples in Figures \ref{fig.dsl_autocomplete_parts},
-\ref{fig.dsl_autocomplete_values}.
+To help the sales clerk in their everyday tasks we have developed a textual DSL
+using Xtext technology. A textual language can speed up the process of creating
+bicycle models, user and other data. Because of the nature of text files,
+sales clerk can easily copy and edit already created model instances.\\
 
+\noindent
+To describe a DSL we have used an Extended Backus–Naur Form (EBNF)
+metalanguage notations. Our DSL is external, meanig that it is completely
+new, not extending an existing language. As we have identified the entities,
+attributes and relations in our ecore model, we use Xtext to generate the DSL. It creates a grammar with rules
+for our entities, abstract types, propteries, relations, etc. We build upon this grammar and modify it for our
+needs. The final Xtext grammar definition is listed in Figure
+\ref{appendix.xtext}. It is extendible and context-free.\\
+
+\noindent
+The target user for the language is the sales clerk and he might not
+necessarily have any programming experience, so we want the language to seem
+natural and helpful for the user. Therefore statement terminators, such as symbols or line feeds, are not
+used. The grammar is rich, having types for entities, attribute
+names, enumerators and other details. This is used to provide context assistance
+in the tools.\\
+
+\noindent
+When using our DSL, the editor executes syntax checking (Figure
+\ref{fig.dsl_empty_model}) and suggests code completion (Figures \ref{fig.dsl_autocomplete_parts},
+\ref{fig.dsl_autocomplete_values}), so the user does not have to type full words and can get help on what parts are left to define.
+The grammar is simple, so it is fast to enter while keeping it perspicuous.
+Excluding separators from the grammar further simplifies the layout.
+Moreover, the keywords and class names are differentiated with syntax
+highlighting.\\
