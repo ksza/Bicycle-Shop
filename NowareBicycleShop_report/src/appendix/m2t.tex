@@ -1,6 +1,28 @@
 \section{M2T Transformation with XPand}
 \label{appendix.xpand}
 
+\begin{figure}[htp]
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.3\linewidth]{fig/xpand/usecase/s1.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.3\linewidth]{fig/xpand/usecase/s2.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.3\linewidth]{fig/xpand/usecase/s3.pdf}
+	}
+	\caption{Invoking invoice generation}
+	\label{fig.xpand.usecase}
+\end{figure}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{fig/xpand/usecase/s1.pdf}
+	\caption{The InvoiceTemplate Xpand and the generated Invoice}
+	\label{fig.xpand.model_xpand_invoice}
+\end{figure}
+
 \subsection{Implementation}
 \label{appendix.xpand.implementation}
 
@@ -14,7 +36,6 @@ commentstyle=\color[rgb]{0.133,0.545,0.133},
 stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
 showstringspaces=false,
 basicstyle=\small,
-numberstyle=\footnotesize,
 numbers=none,
 stepnumber=1,
 numbersep=10pt,
@@ -26,8 +47,14 @@ aboveskip={1.5\baselineskip},
 columns=fixed,
 upquote=true,
 extendedchars=true,
-% frame=single,
-% backgroundcolor=\color{lbcolor},
 }
-\lstinputlisting{appendix/OpenEditPolicy.in}
+
+\lstset{label=lst.extensions,caption=Extensions.ext}
+\lstinputlisting{appendix/src_code/Extensions.in}
+
+\lstset{label=edit_policy_provider,caption=EditPolicyProvider.java}
+\lstinputlisting{appendix/src_code/EditPolicyProvider.in}
+
+\lstset{label=open_edit_policy,caption=OpenEditPolicy.java}
+\lstinputlisting{appendix/src_code/OpenEditPolicy.in}
 \end{center}
