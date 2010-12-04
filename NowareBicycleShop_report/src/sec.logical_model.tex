@@ -1,12 +1,12 @@
-\section{The Model}
+\section{The EMF Model}
 \label{sec.logical_model}
 In this section we will describe how we have achieved a model for our problem.
 
 \subsection{Conceptual Model}
 \noindent We started by discussing the semantics of main elements: \emph{what
-does a bicyle mean?} \emph{what does it consist of?} and \emph{how are they
+does a bicycle mean?} \emph{what does it consist of?} and \emph{how are they
 tied together?} We have answered the questions using sentences like ``A
-\emph{BICYLE} is made up of bicycle \emph{PARTS}. Parts can be customized with
+\emph{BICYCLE} is made up of bicycle \emph{PARTS}. Parts can be customized with
 a \emph{COLOR} and they can be provided by different \emph{MANUFACTURERS}.
 A bicycle part can be a \emph{FRAME}, \emph{WHEEL}, etc''. After describing the
 bicycle in sentences, we have created a graphical representation to give us a
@@ -14,67 +14,114 @@ more easy-to-understand overview. The model is depicted in figure
 \ref{fig.conceptual_model} and it represents the \emph{conceptual model}.
 
 \subsection{Logical Model}
-\noindent The conceptual model was refined in the logical model (Figure \ref{fig.ecore_model})
-where all the important classes, relations and attributes were identified. 
-All the design choices were included by taking into consideration NBS' 
-description of a custom bicycle.\\
+\noindent After defining the \emph{conceptual model}, our aim was to make it
+more concrete. This was achieved by defining a \emph{logical model} and
+implementing it in EMF. Models in EMF are represented as \emph{Ecore} which is a
+an implementation of \emph{eMOF} (Essential MOF\footnote{Meta-Object Facility})
+meta-meta model. The resulting Ecore model represents the \emph{meta-model} for
+the NBS' custom bicycles. The meta-model will be used both by customers of NBS and the sales
+clerks the to model customized bicycles, which can be constructed using the
+available bicycle parts. Relating to our \emph{logical model}, we have
+implemented the \emph{Ecore} model as described in figure \ref{fig.ecore_model}.
+We have defined the \emph{Node} as our top level abstraction for any element
+that can describe a bicycle, which is further specialized by the \emph{Part}
+abstract class. Having the \emph{Node} as top-level element, make the design
+more flexible, then having only the \emph{Part} class. For instance,  in the
+future, we could be asked to extend the model to support \emph{tuning}. Although
+the items used for tuning will be ``part'' of the bicycle, they do not have the
+same semantics as the physical \emph{Part}s that a bicycle is made up of.
+Therefore, we can extend the \emph{Node} to create a \emph{TuningItem} class to
+serve as a abstraction for bicycle tuning item.\\
 
-\noindent The central class of the model is the Part class. It is an abstract
-class and all the concrete parts of the bicycle extend this. The abstract Node 
-class was introduced to conform to the convention of having a Node Super 
-Type presented by the exercises solutions during the course. 
-The Part has all the default attributes (price, manufacturer and id) 
-that all the parts of the bicycle are supposed to have. Enumeration types 
-were used to represent the various types of parts NBS provides to their 
-customers. These are defined in the FrameType, SaddleType, Color, 
-PedalTypes, Manufacturers classes.\\
+\noindent The \emph{Part} class defines the attributes that all specific bicycle
+parts have in common: \emph{price}, \emph{manufacturer} and \emph{id}. The
+manufacturer is represented by the \emph{Manufacturers} enumeration, which
+defines three possible manufacturers the NBS currently is working with:
+\emph{SuperParts}, \emph{HandMadeParts} and \emph{HomeParts}. New manufacturers
+can easily be added to the enumeration.\\
 
-\noindent A note on the Color class; although the description states that the 
-frame can be painted in any color enumerating the different colors was 
-found to be the most suitable solution. In order to provide more 
-flexibility to the users of the system a Color could have been 
-represented by the three RGB values in a 0-255 range, but it was 
-after discussing this option the group found it too circumstantial 
-both to develop and the users to use as it would require an additional 
-tool to provide an RGB value to a certain color.\\
+\noindent Currently, the following concrete bicycle parts are available to
+create a custom bike: \emph{Frame}, \emph{Gear}, \emph{Wheel}, \emph{Pedals}, \emph{Saddle},
+\emph{HandBreaks} and \emph{HandleBars}. The frame is characterize by
+a color and a \emph{FrameType}, which we represented as an enumeration defining
+values for the currently supported frame types \emph{RacerFrame}, \emph{CityFrame} and
+\emph{UniciclyFrame}, each for a specific category of bicycle: RacerBike,
+CityBike and Unicycle. The \emph{Gear} class represents an abstract class for
+the two types of gears a bicycle can have: \emph{InnerGear} and
+\emph{OuterGear}. The pedals and saddle can also be of different types,
+depending on the customers needs. The available type are defined as
+enumerations, such as \emph{PedalType} and \emph{SaddleType}. \\
 
-\noindent A note on the InnerGear and OuterGear classes; as opposed 
-to using enumerations in previous cases, this time subtypes were used 
-for the reason that there are only two types of gears on bikes and 
-it is not expected to change. This implies that the Gear class is an 
-abstract class.\\
+\noindent In the conceptual model we have thought described by a color. In the
+current implementation we ave added this attribute only to the frame, but if needed, the
+model can easily be modified to support color definition for other parts as well.
+In the design phase we aimed for the possibility to specify any custom color for
+the frame, but in the implementation phase enumerating the different colors was
+found to be the most suitable solution. In order to provide more flexibility to
+the users of the system a \emph{Color} could have been represented by the three
+RGB (red-green-blue) values in a 0-255 range, but it would have required an
+additional tool to provide RGB value to a certain color, this feature being out
+of the scope of the current work.\\
 
-\noindent A note on the Bicyle, CustomerData and Parameter classes; 
-the Bicycle class represents the customized bike itself which is 
-built up from the different parts. It has a Price attribute which 
-will be calculated by summing up the prices of individual parts. 
-CustomerData captures the basic information about the customer 
-ordering the bike and it was decided to be extracted from the 
-attributes of Bicycle to have a better modularity and overview of 
-the model. It is possible to extend the CustomerData and Bicycle 
-classes via the Parameter class which has name-value pairs in case 
-it is needed.\\
+\noindent The custom bicycle is represented as the \emph{Bicycle} class, which
+is made up of many \emph{Part}s and has information about the \emph{total price},
+\emph{delivery date} and the \emph{customer data}. The bicycle parts that define
+a custom bicycle are stored in the \emph{parameters} attribute of the
+\emph{Bicycle} class, which is modeled as a composition association from the
+\emph{Bicycle} to the \emph{Part} class, with the multiplicity 0..*. The total
+price, delivery date and customer data. While the first two are represented as
+trivial data type, the customer data is represented as the \emph{CustomerData}
+class with the name and address parameters. In order to support more data than
+the essential ones defined as attributes, we have created the \emph{Paramer} class
+characterized by a name and a value. Both the Bicycle and the CustomerData are
+in are linked through a containment association with the Parameters class.\\
 
-\noindent References from Parts, CustomerData and Parameter to Bicycle 
-are of a composite relationship because all these information have to 
-be connected to an instance of a Bicycle.\\
+\subsection{Custom Bicycle Models}
+Earlier in this section, we have discussed that EMF contains the Ecore
+meta-model. Actually, there is another meta-model EMF is based on:
+the \emph{Genmodel} model. The Ecore meta-model contains the information about
+the defined classes, while the genmodel contains additional information for
+code generation. In order to allow the creation of custom bikes based on our
+meta-model, we had to create the genmodel based on the existing model defined as
+ecore. Using the genmodel we generated the \emph{model code} and the
+\emph{edit}, \emph{editor} and \emph{test} plug-ins. We started a new runtime
+environment with the generated plug-ins, and we have modeled three custom bicycles
+\emph{CityBike}, \emph{SportsBike} and \emph{Unicycle}. The modeled bicycles are
+illustrated in appendix \ref{appendix.emf_models}. The bikes are modeled as
+\emph{.nowarebicycleshop} model files. While modeling a bicycle, the bike
+\emph{editor} presents all the elements that can be added to the model. The
+properties of different elements can be set in the properties view.\\
+
+In order to compute the total price of a custom bicycle and to define define
+prices for parts, we had to modify the generated model code. In the
+\emph{PartsImpl} abstract class we have attached the value
+10 to the \emph{PRICE\_EDEFAULT} attribute and annotated it with
+\emph{@generated NOT} so the generator does not override our modification. This
+means that each bicycle part will have 10 as default price. In the
+\emph{BicycleImpl} class we have modified \emph{getPrice()} method to return the
+sum of all the contained parts' prices. We have annotated this method also with
+\emph{@generated NOT}.
 
 \subsection{Modeling Layers}
-
-\noindent Finally a Metamodel Layer Schema (Figure \ref{fig.metamodel_layers_schema}) shows the connections
-between the elements of the different meta levels. On the top M3 layer is
-the Ecore meta-meta model to which the M2 level meta model conforms. 
-M2 is the logical model developed for the NBS case and all its elements are
-derived from the meta-meta model. E.g. the Frame is a type of EClass. There is 
-EReference between the Bicycle and the Part stating that the Bicycle can have
-more parts. The name in the CustomerData class is of EAttribute having a 
-String as an EDataType.\\
-The M1 level model represents the model of a concrete bicycle. This is 
-the level the employees of NBS and the customers work. This model also
-conforms to the higher M2 level and all the terms used here can be found 
-in the logical model.\\
-M0 level represents the physical bike which will be delivered to the
-customer who ordered it.\\
-There are three custom bicycle models created based on the Ecore model. These
-are Figure \ref{fig.emf_city_bike}, \ref{fig.emf_sport_model}, \ref{fig.gmf_unicycle_model} in
-the Appendix.
+\noindent As already discussed at the beginning of this section, in the Eclipse
+Modeling Framework, EMF is based on the \emph{eMOF}. To create our ecore model,
+we had to extend elements in the ecore meta-meta model: \emph{EClass},
+\emph{EReference}, \emph{EAttribute} and \emph{EDataType}. To create custom
+bicycles, elements in our the meta-model have to be extended. An explanation on
+the modeling levels and how models conform to eachother is depicted in
+\ref{fig.metamodel_layers_schema}:
+\begin{itemize}
+  \item{M3} is the EMF meta meta-model which is based on eMOF used to
+  define other meta-models; it is called meta meta-model because it can be used to
+  represent itself, representing its own meta-model
+  \item{M2} is the meta-model for modeling customized bikes, represented by
+  our ecore model
+  \item{M1} represents the custom bike model, so they are instances of the
+  meta-model; this modeling layer represents the scenarios in which a customer
+  or a sales clerk can define a custom bike (e.g. the custom model we defined
+  in appendix \ref{appendix.emf_models})
+  \item{M0} represents the data and concrete ordering of items; for example,
+  customer ``Test Person'' orders a city bike with a red colored CityFrame
+  provided by SuperParts, which costs 150 and wants it to be delivered by the
+  8th of December, etc.
+\end{itemize} 
