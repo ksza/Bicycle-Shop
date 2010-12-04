@@ -31,11 +31,12 @@ Alina Arm}, pdftitle={Noware Bicycle Shop},
 
 \begin{document}
 
+\pagestyle{empty}
+
 \input{titlepage.tex}
 
 \cleardoublepage
 
-\pagestyle{empty}
 
 % TOC
 \setcounter{tocdepth}{2}
@@ -65,16 +66,18 @@ Alina Arm}, pdftitle={Noware Bicycle Shop},
 \bibliographystyle{plain}
 \bibliography{bibliography}
 
-\clearpage
+\cleardoublepage
 
 \appendix
 
 \input{appendix/ecore_model.tex}
-\input{appendix/custom_bicycles.tex}
-\input{appendix/ocl_errors.tex}
-\input{appendix/xtext.tex}
-\input{appendix/m2t.tex}
-
 \clearpage
+\input{appendix/custom_bicycles.tex}
+\clearpage
+\input{appendix/ocl_errors.tex}
+\clearpage
+\input{appendix/xtext.tex}
+\clearpage
+\input{appendix/m2t.tex}
 
 \end{document}

@@ -3,7 +3,6 @@ package dk.itu.mdd.nbs.diagram.custom;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.gef.EditPart;
@@ -19,7 +18,6 @@ import org.eclipse.xpand2.output.OutputImpl;
 import org.eclipse.xtend.XtendFacade;
 import org.eclipse.xtend.expression.Variable;
 import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
-
 import dk.itu.mdd.nbs.model.nowarebicycleshop.Bicycle;
 import dk.itu.mdd.nbs.model.nowarebicycleshop.NowarebicycleshopPackage;
 

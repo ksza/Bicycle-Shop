@@ -2,55 +2,62 @@
 \label{appendix.xtext}
 
 \subsection{XText Grammar}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/grammar_1.pdf}
-    \end{center}
-\end{figure}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/grammar_2.pdf}
-    \end{center}
-\end{figure}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/grammar_3.pdf}
-    \end{center}
-\end{figure}
+\begin{center}
+	\lstset{captionpos=b,language=Java,numbers=none,basicstyle=\small}
+	\lstset{linewidth=1.0\textwidth}
+	\lstset{
+keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1},
+identifierstyle=\ttfamily,
+commentstyle=\color[rgb]{0.133,0.545,0.133},
+stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941},
+showstringspaces=false,
+basicstyle=\small,
+numbers=none,
+stepnumber=1,
+numbersep=10pt,
+tabsize=2,
+breaklines=true,
+prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+breakatwhitespace=false,
+aboveskip={1.5\baselineskip},
+columns=fixed,
+upquote=true,
+extendedchars=true,
+}
+\lstset{label=lst.extensions,caption=XText Grammar}
+\lstinputlisting{appendix/src_code/NowareBicycleDsl.in}
+\end{center}
 
 \subsection{Custom Bicycles modeled in Textual DSL}
 
 \begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/xtext_example_empty_error.pdf}
-        \caption{An empty bicycle model}
+	\centering
+	\subfigure[An empty bicycle model]{
+		\includegraphics[width=0.35\linewidth]{fig/xtext/xtext_example_empty_error.pdf}
         \label{fig.dsl_empty_model}
-    \end{center}
+	}
+	\subfigure[Autocomplete support for possible values]{
+		\includegraphics[width=0.35\linewidth]{fig/xtext/xtext_example_autocomplete_value.pdf}
+		\label{fig.dsl_autocomplete_values}
+	}
+	\subfigure[Autocomplete support for Parts]{
+		\includegraphics[width=0.20\linewidth]{fig/xtext/xtext_example_autocomplete.pdf}
+		\label{fig.dsl_autocomplete_parts}
+	}
 \end{figure}
 
 \begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/xtext_example_autocomplete.pdf}
-        \caption{Autocomplete support for Parts}
-        \label{fig.dsl_autocomplete_parts}
-    \end{center}
-\end{figure}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/xtext_example_autocomplete_value.pdf}
-        \caption{Autocomplete support for possible values}
-        \label{fig.dsl_autocomplete_values}
-    \end{center}
-\end{figure}
-
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=\textwidth]{fig/xtext/xtext_example_complete.pdf}
-        \caption{A complete bicycle model}
-        \label{fig.dsl_complete}
-    \end{center}
+	\centering
+	\subfigure[City Bike Model in XText]{
+		\includegraphics[width=0.48\linewidth]{fig/xtext/cityBike_xtext.pdf}
+        \label{fig.xtext_city_bike}
+	}
+	\subfigure[Sport Bike Model in XText]{
+		\includegraphics[width=0.48\linewidth]{fig/xtext/sportsBike_xtext.pdf}
+		\label{fig.xtext_sport_model}
+	}
+	\subfigure[Unicycle Model in XText]{
+		\includegraphics[width=0.50\linewidth]{fig/xtext/uniBike_xtext.pdf}
+		\label{fig.xtext_unicycle_model}
+	}
 \end{figure}
