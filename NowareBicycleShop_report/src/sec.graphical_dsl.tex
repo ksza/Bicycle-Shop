@@ -19,8 +19,8 @@ are:
 Next we will introduce the steps taken in order to achieve
 that and the outcome of each.\\
 
-\noindent Earlier we described how we created the Ecore Domain Model. The Ecore
-model defines the non-graphical information managed by the editor. The first
+\noindent Earlier we described how we created the \emph{Ecore} domain model. The
+\emph{Ecore} model defines the non-graphical information managed by the editor. The first
 model needed for the editor is the Graphical Definition Model (gmfgraph) which
 is used to define graphical elements (figures, nodes, links)
 which will be displayed in the editor. \\
@@ -31,7 +31,7 @@ graphical elements. The Mapping Model (gmfmap) is combined of the three
 previously created definition models (domain, graphical and tooling).
 It provides the input for the transformation step. Also, the Audit Rules
 (constraints) can be added here. The Mapping model is then transformed into the Diagram
-Geneneration Model (gmfgen). This model is used for generating the code for the graphical
+Generation Model (gmfgen). This model is used for generating the code for the graphical
 editor. It is similar to the EMF genmodel, mentioned earlier.
 \cite{GMF_Tutorial}\\
 
@@ -44,7 +44,7 @@ might have different amount of parts. This is a more intuitive way to interact
 with the system for the customers of NBS.\\
 
 \noindent The user has the possibility to change the name of a part but changing
-the price is not allowd in the canvas. It is only possible to change the
+the price is not allowed in the canvas. It is only possible to change the
 price in the Properties view. For that reason the Properties view should not be
 shown to the customer in the final implementation. The OCL Constraints are
 implemented in the GMF, specifically in the gmfmap as Audit Rules. The errors are shown as in the Figure \ref{fig.gmf_validation}\\
@@ -57,7 +57,7 @@ graphical editor we just developed. \\
 \noindent Feature initializers were not a part of the implementation, however
 they could be useful. Every new bicycle model could have
 additional parameters with name and value set added on the initialization. For instance, this could be a new parameter named
-'Telephone Number' having an empty default value.\\ Modelling link
+'Telephone Number' having an empty default value.\\ Modeling link
 constraints were also not a part of implementation, since we do not use links in the
 project. None the less, it is a useful feature that allows to constrain users
 from linking objects together. \\
