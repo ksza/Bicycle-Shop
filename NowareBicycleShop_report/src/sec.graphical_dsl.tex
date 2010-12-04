@@ -29,11 +29,10 @@ which will be displayed in the editor. \\
 which is used to specify the palette, creation tools and actions for the
 graphical elements. The model needed to combine the previously created three
 definition models (doman, graphical and tooling) is the Mapping Model (gmfmap).
-It provides the input for the transformation step which produces the final,
-Diagram Geneneration Model (gmfgen). In this model amongst others, we can set
-the properties of the generation or add Audit Rules (constraints) for the
-graphical model. It is similar to the EMF genmodel
-mentioned earlier. \cite{GMF_Tutorial} \\
+It provides the input for the transformation step and Audit Rules (constraints)
+can be added here. The Mapping model is then transformed into the  Diagram
+Geneneration Model (gmfgen). This model is used for generating the code for the graphical
+editor. It is similar to the EMF genmodel mentioned earlier. \cite{GMF_Tutorial}\\
 
 \noindent Having all the models it is possible to generate the code necessary
 for a running diagram editor. When the user creates a new NBS diagram (s)he is
