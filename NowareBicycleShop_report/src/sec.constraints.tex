@@ -1,33 +1,21 @@
 \section{OCL Constraints}
 \label{sec.ocl_constraints}
 
-\noindent NBS provided rules how to ensure that only valid bikes are modeled and
-ordered by customers. That requires developing constraints on how the DSL can be
-used i.e. defining the static semantics. There are certain requirements for that
-to realize. There has to be a language to formally specify the constraints, an
-engine to execute them and show the constraint violations in the development
-environment. The language for defining constraints on metamodels is OCL (Object
-Constraint Language). \noindent The constraints were implemented as invariants
-in the Ecore model and were executed in the runtime workbench on newly created
-models. OCL Constraints are listed in Appendix C and validation errors shown in
-the Appendix Figure \ref{fig.ocl_bike_errors}, \ref{fig.ocl_ecore_handbreaks}.
-\noindent As progressing in the assignment these OCL constraints were
-implemented in the GMF model too, so the model can be validated in the GMF
-Diagram editor, which is meant to be used by the customers. However with this
-approach having it both in the Ecore model and in GMF the error messages were
-duplicated and it has been decided to remove them from Ecore. The implementation
-in GMF is described in the associated section.
+\noindent 
+\emph{Noware Bicycle Shop} (NBS) must provide rules to ensure that
+only valid bikes are modeled and ordered by customers. To accomplish this, a full
+set of constraints were implemented in the \emph{Ecore} meta-model using the
+\emph{OCL}.\\
 
-\noindent VERSION 2: To ensure that only valid bicycles can be modeled a full
-set of constraints (defined in OCL language) was implemented in the metamodel
-(Ecore model). List of textual constraints and their definitions as Boolean OCL
-expressions are shown in the Appendix Figure \ref{fig.ocl_bike_errors}.  All
-constraints were implemented as invariants using generated Java code (nbs.ecore)
-for Bicycle object (self object in the OCL statements). For each invariant was
-given a name for easy referring to them. These invariants specify the valid sets
-of parts for Bicycle model. OCL constraints were executed in the runtime
-workbench on newly created models. Examples of validation errors are shown in
-the Appendix Figure \ref{fig.ocl_bike_errors}, \ref{fig.ocl_ecore_handbreaks}.
-Since these OCL constraints were also implemented in the GMF model to avoid
-modeling invalid bikes by customers it has been decided to remove them from
-Ecore (to avoid the duplicated error messages in GMF).
+\noindent
+A list of textual constraints and their definitions in OCL expressions are shown
+in the Appendix Figure \ref{appendix.validation}. All constraints were implemented as invariants using
+generated Java code (nbs.ecore) for the Bicycle object. Each invariant was given
+a name for the ease of referrence. These invariants specify the valid sets
+of parts for the Bicycle model. OCL constraints are executed in the runtime
+workbench on newly created models. Examples of validation errors are shown in the Appendix Figure
+\ref{fig.ocl_bike_errors}, \ref{fig.ocl_ecore_handbreaks}.\\
+
+\noindent 
+When progressing with the project, we have moved the OCL constraints from the
+\emph{Ecore} meta-model to the \emph{GMF} Audit Rules. This still allows torestrict the customers from modelling invalid bikes in the \emph{GMF} Diagrameditor. However, it also enables displaying validations with user-friendlymasseges.
