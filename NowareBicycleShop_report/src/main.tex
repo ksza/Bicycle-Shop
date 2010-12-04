@@ -1,5 +1,6 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[twoside, headsepline, 12pt, a4paper, chapterprefix, bibtotoc]{article}
 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \usepackage{array}
 \usepackage{times}
 \usepackage{url}
@@ -13,7 +14,7 @@
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
+\usepackage[pdftex]{graphicx}
 \usepackage[top=3.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry}
 
 \usepackage[pdftex, pdfauthor={Karoly Szanto, Alvis Davidavicius, Roland Beta,
@@ -28,25 +29,21 @@ Alina Arm}, pdftitle={Noware Bicycle Shop},
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-\title{Noware Bicycle Shop}
-\author{
-K\'aroly Sz\'ant\'o \href{mailto:ksza@itu.dk}{ksza@itu.dk}\\
-Alvis Davidavicius \href{mailto:adav@itu.dk}{adav@itu.dk}\\
-Roland Beta \href{mailto:rolb@itu.dk}{rolb@itu.dk}\\
-Alina Arm \href{mailto:aarm@itu.dk}{aarm@itu.dk}
-}
-\date{December, 2010}
-
 \begin{document}
-\maketitle{}
 
-\clearpage
+\input{titlepage.tex}
+
+\cleardoublepage
+
+\pagestyle{empty}
 
 % TOC
 \setcounter{tocdepth}{2}
 \tableofcontents
 
-\clearpage
+\cleardoublepage
+
+\pagestyle{plain}
 
 \input{introduction.tex}
 
@@ -67,6 +64,8 @@ Alina Arm \href{mailto:aarm@itu.dk}{aarm@itu.dk}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{bibliography}
+
+\clearpage
 
 \appendix
 
