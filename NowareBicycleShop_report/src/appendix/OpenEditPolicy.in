@@ -1,0 +1,113 @@
+package dk.itu.mdd.nbs.diagram.custom;
+
+import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EcorePackage;
+import org.eclipse.gef.EditPart;
+import org.eclipse.gef.Request;
+import org.eclipse.gef.commands.Command;
+import org.eclipse.gmf.runtime.diagram.ui.requests.DuplicateRequest;
+import org.eclipse.gmf.runtime.notation.impl.DiagramImpl;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.xpand2.XpandExecutionContextImpl;
+import org.eclipse.xpand2.XpandFacade;
+import org.eclipse.xpand2.output.Outlet;
+import org.eclipse.xpand2.output.OutputImpl;
+import org.eclipse.xtend.XtendFacade;
+import org.eclipse.xtend.expression.Variable;
+import org.eclipse.xtend.typesystem.emf.EmfRegistryMetaModel;
+
+import dk.itu.mdd.nbs.model.nowarebicycleshop.Bicycle;
+import dk.itu.mdd.nbs.model.nowarebicycleshop.NowarebicycleshopPackage;
+
+/**
+ * A class to replace the default {@link org.eclipse.gmf.runtime.diagram.ui.editpolicies.OpenEditPolicy}
+ * to handle edit actions triggered by the user on the Bicyle diagram. 
+ * 
+ * @author mSpazzy
+ * @version 1.0
+ */
+public class OpenEditPolicy extends org.eclipse.gmf.runtime.diagram.ui.editpolicies.OpenEditPolicy {
+
+	private final String INVOICES_DIRECTORY;
+	private final String INVOICE_TYPE = ".html";
+	
+	/** the bicycle diagram */
+	private EditPart editpart;
+	
+	public OpenEditPolicy(EditPart editpart) {
+		this.editpart = editpart;
+		
+		INVOICES_DIRECTORY = System.getProperty("java.io.tmpdir") + "/nbs_invoices";
+	}
+
+	@Override
+	public Command getCommand(final Request request) {
+		
+		if(request instanceof DuplicateRequest) {
+			return new Command() {
+
+				@Override
+				public void execute() {
+					System.out.println(request);
+
+					System.out.println("[NowhareBicycleShop] Invoice Generation ...");
+
+					/* get the Bicycle instance under the edited diagram */
+					Bicycle bicycle = (Bicycle) ((DiagramImpl)editpart.getModel()).getElement();
+
+					/* configure the outlet to be used by the generator */
+					OutputImpl output = new OutputImpl();
+					Outlet outlet = new Outlet(INVOICES_DIRECTORY);
+					outlet.setOverwrite(true);
+					output.addOutlet(outlet);
+
+					/* create an execution context for the XPand and XTend programmatic execution */
+					Map<String, Variable> globalVariablesMockMap = new HashMap<String, Variable>();
+
+					/* create the execution context based on our custom Outlet and mocked_variables_map */
+					XpandExecutionContextImpl executionContext = new XpandExecutionContextImpl(output, null, globalVariablesMockMap, null, null);
+
+					/* create a mock EMFRegistry to contain our meta_model and the ecore_metamodel */
+					EmfRegistryMetaModel metamodel = new EmfRegistryMetaModel() {
+						@Override
+						protected EPackage[] allPackages() {
+							return new EPackage[] { NowarebicycleshopPackage.eINSTANCE, EcorePackage.eINSTANCE };
+						}
+					};
+					/* register the mock registry in the execution context */
+					executionContext.registerMetaModel(metamodel);
+
+					XpandFacade facade = XpandFacade.create(executionContext);
+					String xpandTemplatePath = "template::InvoiceTemplate::main";
+					/* launch the M2T transformation ! */
+					facade.evaluate(xpandTemplatePath, bicycle);
+
+					try {
+						XtendFacade extendFacade = XtendFacade.create(executionContext, "template::Extensions");
+						/* get the absolute path to the generated file */
+						String invoiceFile = INVOICES_DIRECTORY + "/" + (String)extendFacade.call("getTitle", bicycle) + INVOICE_TYPE;
+
+						/* show the invoice in an external browser */
+						PlatformUI.getWorkbench().getBrowserSupport().getExternalBrowser().openURL(
+								new URL("file:////" + invoiceFile)
+						);
+					}
+					catch (Exception err) {
+						err.printStackTrace();
+					}
+				}
+			};
+		} else {
+			return super.getCommand(request);
+		}
+	}
+
+	@Override
+	protected Command getOpenCommand(Request request) {
+		return getOpenCommand(request);
+	}
+}

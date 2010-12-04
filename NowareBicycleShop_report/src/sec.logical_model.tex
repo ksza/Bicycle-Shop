@@ -1,17 +1,17 @@
 \section{The Model}
 \label{sec.logical_model}
+In this section we will describe how we have achieved a model for our problem.
 
 \subsection{Conceptual Model}
-\noindent When creating the models firstly the highest level of 
-abstraction was used. The relationships between the important concepts 
-of the model were roughly described in a conceptual model (Figure \ref{fig.conceptual_model}). 
-The different parts and other characteristics were identified which 
-constitute a bicycle. There is a hierarchy between these parts which 
-also represents the associations between those objects. The conceptual 
-model can also be expressed by statements, e.g.: "A bicycle consists of 
-several bicycle parts. The parts can have common attributes which are 
-inherited from the super part type or have their own specific attributes 
-with the appropriate data type. 
+\noindent We started by discussing the semantics of main elements: \emph{what
+does a bicyle mean?} \emph{what does it consist of?} and \emph{how are they
+tied together?} We have answered the questions using sentences like ``A
+\emph{BICYLE} is made up of bicycle \emph{PARTS}. Parts can be customized with
+a \emph{COLOR} and they can be provided by different \emph{MANUFACTURERS}.
+A bicycle part can be a \emph{FRAME}, \emph{WHEEL}, etc''. After describing the
+bicycle in sentences, we have created a graphical representation to give us a
+more easy-to-understand overview. The model is depicted in figure
+\ref{fig.conceptual_model} and it represents the \emph{conceptual model}.
 
 \subsection{Logical Model}
 \noindent The conceptual model was refined in the logical model (Figure \ref{fig.ecore_model})
