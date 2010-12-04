@@ -18,7 +18,7 @@ more easy-to-understand overview. The model is depicted in figure
 more concrete. This was achieved by defining a \emph{logical model} and
 implementing it in EMF. Models in EMF are represented as \emph{Ecore} which is a
 an implementation of \emph{eMOF} (Essential MOF\footnote{Meta-Object Facility})
-meta-meta model. The resulting Ecore model represents the \emph{meta-model} for
+meta-meta model. The resulting \emph{Ecore} model represents the \emph{meta-model} for
 the NBS' custom bicycles. The meta-model will be used both by customers of NBS and the sales
 clerks the to model customized bicycles, which can be constructed using the
 available bicycle parts. Relating to our \emph{logical model}, we have
@@ -77,13 +77,13 @@ characterized by a name and a value. Both the Bicycle and the CustomerData are
 in are linked through a containment association with the Parameters class.\\
 
 \subsection{Custom Bicycle Models}
-Earlier in this section, we have discussed that EMF contains the Ecore
+Earlier in this section, we have discussed that EMF contains the \emph{Ecore}
 meta-model. Actually, there is another meta-model EMF is based on:
-the \emph{Genmodel} model. The Ecore meta-model contains the information about
+the \emph{Genmodel} model. The \emph{Ecore} meta-model contains the information about
 the defined classes, while the genmodel contains additional information for
 code generation. In order to allow the creation of custom bikes based on our
 meta-model, we had to create the genmodel based on the existing model defined as
-ecore. Using the genmodel we generated the \emph{model code} and the
+\emph{Ecore}. Using the genmodel we generated the \emph{model code} and the
 \emph{edit}, \emph{editor} and \emph{test} plug-ins. We started a new runtime
 environment with the generated plug-ins, and we have modeled three custom bicycles
 \emph{CityBike}, \emph{SportsBike} and \emph{Unicycle}. The modeled bicycles are
@@ -92,22 +92,22 @@ illustrated in appendix \ref{appendix.emf_models}. The bikes are modeled as
 \emph{editor} presents all the elements that can be added to the model. The
 properties of different elements can be set in the properties view.\\
 
-In order to compute the total price of a custom bicycle and to define define
+In order to compute the total price of a custom bicycle and to define
 prices for parts, we had to modify the generated model code. In the
 \emph{PartsImpl} abstract class we have attached the value
 10 to the \emph{PRICE\_EDEFAULT} attribute and annotated it with
 \emph{@generated NOT} so the generator does not override our modification. This
 means that each bicycle part will have 10 as default price. In the
 \emph{BicycleImpl} class we have modified \emph{getPrice()} method to return the
-sum of all the contained parts' prices. We have annotated this method also with
+sum of all the contained parts' prices. This method was also annotated with
 \emph{@generated NOT}.
 
 \subsection{Modeling Layers}
 \noindent As already discussed at the beginning of this section, in the Eclipse
-Modeling Framework, EMF is based on the \emph{eMOF}. To create our ecore model,
-we had to extend elements in the ecore meta-meta model: \emph{EClass},
-\emph{EReference}, \emph{EAttribute} and \emph{EDataType}. To create custom
-bicycles, elements in our the meta-model have to be extended. An explanation on
+Modeling Framework (EMF) is based on the \emph{eMOF}. To create our \emph{Ecore} model,
+we had to instantiate elements from the \emph{Ecore} meta-meta model:
+\emph{EClass}, \emph{EReference}, \emph{EAttribute} and \emph{EDataType}. To create custom
+bicycles, elements in our meta-model have to be instantiated. An explanation on
 the modeling levels and how models conform to eachother is depicted in
 \ref{fig.metamodel_layers_schema}:
 \begin{itemize}
@@ -115,7 +115,7 @@ the modeling levels and how models conform to eachother is depicted in
   define other meta-models; it is called meta meta-model because it can be used to
   represent itself, representing its own meta-model
   \item{M2} is the meta-model for modeling customized bikes, represented by
-  our ecore model
+  our \emph{Ecore} model
   \item{M1} represents the custom bike model, so they are instances of the
   meta-model; this modeling layer represents the scenarios in which a customer
   or a sales clerk can define a custom bike (e.g. the custom model we defined
