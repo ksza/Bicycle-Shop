@@ -1,40 +1,30 @@
 \section{Graphical DSL using GMF}
 \label{sec.gmf}
 
-\noindent \emph{GMF}\footnote{Graphical Modeling Framework} is a framework for
+\noindent \emph{GMF} is a framework for
 building modeling-like graphical Eclipse-based editors.
 \cite{Article_Introducing_GMF} GMF supports the generation of a graphical editor
 from a set of models. In this section we will present the important
-milestones of creating a graphical editor and why were they necessary. These
-are:
-
-\begin{itemize}
-  \item Graphical Definition Model
-  \item Tooling Definition Model
-  \item Mapping Model
-  \item Diagram Generation Model
-  \item Code Generation and creating models
-  \item Additional remarks
-\end{itemize}
+milestones of creating a graphical editor and why were they necessary. 
 
 \noindent Earlier we described how we created the \emph{Ecore} domain model. The
 \emph{Ecore} model defines the non-graphical information managed by the editor. The first
-model needed for the editor is the Graphical Definition Model (gmfgraph) which
-is used to define graphical elements (figures, nodes, links)
+model needed for the graphical editor is the \emph{Graphical Definition Model}
+(gmfgraph) which is used to define graphical elements (figures, nodes, links)
 which will be displayed in the editor. \\
 
-\noindent Second is the Tooling Definition Model (gmftool),
-which is used to specify the palette, creation tools and actions for the
-graphical elements. The Mapping Model (gmfmap) is combined of the three
-previously created definition models (domain, graphical and tooling).
-It provides the input for the transformation step. Also, the Audit Rules
-(constraints) can be added here. The Mapping model is then transformed into the Diagram
-Generation Model (gmfgen). This model is used for generating the code for the graphical
-editor. It is similar to the EMF genmodel, mentioned earlier.
-\cite{GMF_Tutorial}\\
+\noindent The \emph{Tooling Definition Model} (gmftool),
+is used to specify the palette, creation tools and actions for the
+graphical elements. The \emph{Mapping Model} (gmfmap) is combined of the
+three previously created definition models (domain, graphical and tooling).
+It provides the input for the transformation step. The OCL Constraints are
+implemented in the \emph{Mapping Model} as Audit Rules. The \emph{Mapping Model}
+is then transformed into the \emph{Diagram Generation Model} (gmfgen). This
+model is used for generating the code for the graphical editor. It is similar to
+the \emph{EMF Generation Model}, mentioned earlier. \cite{GMF_Tutorial}\\
 
-\noindent Having all the models it is possible to generate the code necessary
-for a running diagram editor. When the user creates a new NBS diagram he is
+\noindent Having all the required models it is possible to generate the code
+necessary for a running diagram editor. When the user creates a new NBS diagram he is
 shown a canvas where elements of the model can be dragged and dropped from the
 palette. There are no connections between the certain parts
 of the bicycle, because they can be placed in any order and different bicycles
@@ -44,14 +34,13 @@ with the system for the customers of NBS.\\
 \noindent The user has the possibility to change the name of a part but changing
 the price is not allowed in the canvas. It is only possible to change the
 price in the Properties view. For that reason the Properties view should not be
-shown to the customer in the final implementation. The OCL Constraints are
-implemented in the GMF, specifically in the gmfmap as Audit Rules. 
-The errors are shown as in the Figure \ref{fig.gmf_validation}\\
+shown to the customer in the final implementation.  
+Validation error examples are shown in Figure \ref{fig.gmf_validation}.\\
 
 \noindent Feature initializers were not a part of the implementation, however
 they could be useful. Every new bicycle model could have additional parameters
 with name and value set added on the initialization. For instance, this could be
 a new parameter named 'Telephone Number' having an empty default value.\\
 Modeling link constraints were neither part of implementation, since we do
-not use links in the project. None the less, it is a useful feature that allows
-to constrain users from linking objects together. \\
+not use links in the project. Nonetheless, it is a useful feature that allows
+to constrain users from linking objects together. \\
