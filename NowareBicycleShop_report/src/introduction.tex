@@ -43,8 +43,8 @@ our approach, relating to the main tasks we carried out:
   constraints
   \item development of a \emph{GMF}\footnote{Graphical Modeling Framework} based
   \emph{graphical DSL}
-  \item development of a \emph{XText}\footnote{a Language Development Framework}
-  based \emph{textual editor}
+  \item development of an \emph{XText}\footnote{a Language Development
+  Framework} based \emph{textual editor}
   \item creation of a \emph{M2T}\footnote{model to text} transformation using
   Xpand\footnote{a language specialized on code generation based on EMF models}
   to create a textural invoice that summarizes the custom bike's configuration
@@ -57,10 +57,10 @@ and semantical use of the DSL, constraints must be added to the model. We have
 achieved this by using OCL. As the end user is both the customer and the sales
 clerk, we have decided to implement both a textual and a graphical concrete syntax. On
 one hand, the customer can use an intuitive and easy-to-use graphical
-syntax, running on touch screen enabled devices that offer visualizations
+editor, running on touch screen enabled devices that offer visualizations
 of the model's instances to rapidly construct the desired bicycle. On the other
 hand, the sales clerk can use the textual syntax to define instance models in a
-text-based language, witch allows using extended features such as overriding
+text-based language, which allows using extended features such as overriding
 the price of bicycle parts. In order to represent the textual syntax, we have
 created an \emph{EBNF}\footnote{Extended Backus Normal Form} grammar, which we later 
 implemented in the XText editor. To implement the graphical syntax, we have used GMF, 

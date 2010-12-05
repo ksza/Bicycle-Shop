@@ -16,11 +16,10 @@ more easy-to-understand overview. The model is depicted in figure
 \subsection{Logical Model}
 \noindent After defining the \emph{conceptual model}, our aim was to make it
 more concrete. This was achieved by defining a \emph{logical model} and
-implementing it in EMF. Models in EMF are represented as \emph{Ecore} which is a
-an implementation of \emph{eMOF} (Essential MOF\footnote{Meta-Object Facility})
-meta-meta model. The resulting \emph{Ecore} model represents the \emph{meta-model} for
+implementing it in EMF. Models in EMF are represented as \emph{Ecore} which is 
+an implementation of \emph{eMOF} (Essential MOF\footnote{Meta-Object Facility}) meta-meta model. The resulting \emph{Ecore} model represents the \emph{meta-model} for
 the NBS' custom bicycles. The meta-model will be used both by customers of NBS and the sales
-clerks the to model customized bicycles, which can be constructed using the
+clerks to model customized bicycles, which can be constructed using the
 available bicycle parts. Relating to our \emph{logical model}, we have
 implemented the \emph{Ecore} model as described in figure \ref{fig.ecore_model}.
 We have defined the \emph{Node} as our top level abstraction for any element
@@ -31,7 +30,7 @@ future, we could be asked to extend the model to support \emph{tuning}. Although
 the items used for tuning will be ``part'' of the bicycle, they do not have the
 same semantics as the physical \emph{Part}s that a bicycle is made up of.
 Therefore, we can extend the \emph{Node} to create a \emph{TuningItem} class to
-serve as a abstraction for bicycle tuning item.\\
+serve as an abstraction for bicycle tuning item.\\
 
 \noindent The \emph{Part} class defines the attributes that all specific bicycle
 parts have in common: \emph{price}, \emph{manufacturer} and \emph{id}. The
@@ -49,12 +48,12 @@ values for the currently supported frame types \emph{RacerFrame}, \emph{CityFram
 CityBike and Unicycle. The \emph{Gear} class represents an abstract class for
 the two types of gears a bicycle can have: \emph{InnerGear} and
 \emph{OuterGear}. The pedals and saddle can also be of different types,
-depending on the customers needs. The available type are defined as
+depending on the customers needs. The available types are defined as
 enumerations, such as \emph{PedalType} and \emph{SaddleType}. \\
 
 \noindent In the conceptual model we have thought described by a color. In the
-current implementation we ave added this attribute only to the frame, but if needed, the
-model can easily be modified to support color definition for other parts as well.
+current implementation we have added this attribute only to the frame, but if
+needed, the model can easily be modified to support color definition for other parts as well.
 In the design phase we aimed for the possibility to specify any custom color for
 the frame, but in the implementation phase enumerating the different colors was
 found to be the most suitable solution. In order to provide more flexibility to
@@ -72,14 +71,14 @@ a custom bicycle are stored in the \emph{parameters} attribute of the
 price, delivery date and customer data. While the first two are represented as
 trivial data type, the customer data is represented as the \emph{CustomerData}
 class with the name and address parameters. In order to support more data than
-the essential ones defined as attributes, we have created the \emph{Paramer} class
-characterized by a name and a value. Both the Bicycle and the CustomerData are
-in are linked through a containment association with the Parameters class.\\
+the essential ones defined as attributes, we have created the \emph{Parameter}
+class characterized by a name and a value. Both the Bicycle and the CustomerData
+are linked through a containment association with the Parameters class.\\
 
 \subsection{Custom Bicycle Models}
 Earlier in this section, we have discussed that EMF contains the \emph{Ecore}
 meta-model. Actually, there is another meta-model EMF is based on:
-the \emph{Genmodel} model. The \emph{Ecore} meta-model contains the information about
+the \emph{Genmodel}. The \emph{Ecore} meta-model contains the information about
 the defined classes, while the genmodel contains additional information for
 code generation. In order to allow the creation of custom bikes based on our
 meta-model, we had to create the genmodel based on the existing model defined as
@@ -108,7 +107,7 @@ Modeling Framework (EMF) is based on the \emph{eMOF}. To create our \emph{Ecore}
 we had to instantiate elements from the \emph{Ecore} meta-meta model:
 \emph{EClass}, \emph{EReference}, \emph{EAttribute} and \emph{EDataType}. To create custom
 bicycles, elements in our meta-model have to be instantiated. An explanation on
-the modeling levels and how models conform to eachother is depicted in
+the modeling levels and how models conform to each other is depicted in
 \ref{fig.metamodel_layers_schema}:
 \begin{itemize}
   \item{M3} is the EMF meta meta-model which is based on eMOF used to

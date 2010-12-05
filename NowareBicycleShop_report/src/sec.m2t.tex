@@ -14,7 +14,7 @@ code for the extensions template is shown in appendix
 
 \noindent To implement the M2T Transformation, we have used \emph{XPand}. We
 have implemented the templates in the same project with the EMF model. To be able to
-do this, the first step was to enable the Xtent/Xpand nature on the model
+do this, the first step was to enable the Xtend/Xpand nature on the model
 project. Afterwards, we defined the two template files, \emph{Extensions.ext}
 and \emph{InvoiceTemplate.xpt}, in the \emph{model/template} package. This way
 both templates are able to import and work with the \emph{nowarebicycleshop}
@@ -22,9 +22,9 @@ model. Figure \ref{fig.xpand.model_xpand_invoice} illustrates the
 InvoiceTemplate file and the resulting invoice a M2T transformation applied to
 the presented concrete model.\\
 
-\noindent \emph{Extensions.ext} is an Xtent template which defines three utility
+\noindent \emph{Extensions.ext} is an Xtend template which defines three utility
 methods for the Xpand template: \emph{getTitle()} which creates the file name
-for the invoice, \emph{getDocumentHeader()} to crate the HTML header and
+for the invoice, \emph{getDocumentHeader()} to create the HTML header and
 \emph{getDocumentFooter} to create the HTML footer. \emph{InvoiceTemplate.xpt}
 is a Xpand template where we define the actual transformation from the custom
 bicycle model to an invoice represented as HTML. In the template file we define
@@ -36,8 +36,8 @@ fills it with the followings:
   \item customer name, address, delivery date and total price
   \item for each part in the bicycle model, calls the \emph{part} template
   filling in information regarding each bicycle part
-  \item document footer provided by \emph{getDocumentFooter}
-\end{itemize}\\
+  \item document footer provided by \emph{getDocumentFooter}\\
+\end{itemize}
 
 \noindent After implementing the templates, we have created the
 \emph{dk.itu.mdd.nbs.diagram.custom} plug-in as a GMF extension point, in order
@@ -57,8 +57,8 @@ the following actions are taken to fulfill the transformation:
   ecore meta-model
   \item register the mock registry in the execution context
   \item launch the M2T transformation using the \emph{XpandFacade} class
-  \item show the invoice in an external browser
-\end{itemize}\\
+  \item show the invoice in an external browser\\
+\end{itemize}
 
-\noindent We have gained deeper technical background about Xtent/Xpand from
+\noindent We have gained deeper technical background about Xtend/Xpand from
 \cite{XPAND_EXAMPLE}.
