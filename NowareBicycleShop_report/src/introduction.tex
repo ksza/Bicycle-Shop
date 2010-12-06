@@ -23,42 +23,24 @@ terms in an IT environment and speed up the development process of the system.
 \subsection{The Process}
 \noindent As the aim is to achieve a flexible and effective solution, we have
 adopted a model driven development approach, which helps in capturing domain
-knowledge described in terms of a \emph{Domain Specific Language} (DSL). This
-kind of approach results into a closer cooperation between the users of the
-system and the developers. More than that, the code is automatically generated
-based on the model. In the remainder of this section we will briefly describe
+knowledge described in terms of a \emph{Domain Specific Language} (DSL). 
+In the remainder of this section we will briefly describe
 our approach, relating to the main tasks we carried out:
 \begin{itemize}
-  \item construction of a conceptual data model to represent a single customized
-  bicycle, to be delivered to a single customer
+  \item construction of a conceptual data model to represent a bicycle
   \item construction and implementation of a logical model as an
-  \emph{EMF}\footnote{Eclipse Modeling Framework} model
+  \emph{EMF}\footnote{Eclipse Modeling Framework} model to represent a single
+  customized bicycle, to be delivered to a single customer 
   \item definition of \emph{OCL}\footnote{Object Constraint Language}
   constraints
   \item development of a \emph{GMF}\footnote{Graphical Modeling Framework} based
-  \emph{graphical DSL}
+  \emph{graphical DSL} for customers
   \item development of an \emph{XText}\footnote{a Language Development
-  Framework} based \emph{textual editor}
+  Framework} based \emph{textual editor} for sales clerks
   \item creation of a \emph{M2T}\footnote{model to text} transformation using
   Xpand\footnote{a language specialized on code generation based on EMF models}
   to create a textural invoice that summarizes the custom bike's configuration
 \end{itemize} 
-
-\noindent The EMF model represents the meta-model used for
-defining the abstract syntax of the DSL. In order to assure a good structural
-and semantical use of the DSL, constraints must be added to the model. We have
-achieved this by using OCL. As an end user is both a customer and a sales
-clerk, we have decided to implement both a textual and a graphical concrete syntax. On
-one hand, a customer can use an intuitive and easy-to-use graphical
-editor, running on touch screen enabled devices that offer visualizations
-of the model's instances to rapidly construct the desired bicycle. On the other
-hand, the sales clerk can use the textual syntax to define instance models in a
-text-based language, which allows using extended features such as overriding
-the price of bicycle parts. In order to represent the textual syntax, we have
-created an \emph{EBNF}\footnote{Extended Backus Normal Form} grammar, which we later 
-implemented in the XText editor. To implement the graphical syntax, we have used GMF, 
-which maps the abstract syntax to a graphical notation for our DSL, resulting in
-a feature rich diagram editor.\\
 
 \noindent The report starts by describing the problem, the
 motivation and the steps we have taken. Section \ref{sec.logical_model}
