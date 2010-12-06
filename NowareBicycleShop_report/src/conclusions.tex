@@ -1,22 +1,15 @@
 \section{Conclusions}
 \label{sec.conclusions}
-
-\noindent  The aim of this work was to create an IT solution for 
-Noware Bicycle Shop, which will run on the terminals with touch screens 
-and provide a possibility for customers to customize bike themselves 
-in the shop and provide a textual editor for sales clerks to enter bike
-configurations easily. As a result were created:
-\begin{itemize} 
-  \item The conceptual model for defining the main concepts of a bicycle
-  \item The logical (EMF) model for representing a single customized bicycle
-  \item The set of OCL statements as constraints on the model
-  \item The textual editor (based on XText) to define a custom bicycle by the
-  sales clerks.
-  \item The graphical editor (based on GMF) to define a custom bicycle by the
-  customers on the touch screens (with a validation to ensure that only valid 
-  bicycles can be represented).
-  \item The transformation (using XPand) of a custom bicycle model into a 
-  textual invoice (HTML) which lists the bike properties and customer data 
-  and can be given to the customer and documented for accounting.
-\end{itemize}
-During the work the aim was achieved and represents the complete application for NBS.
+\noindent By carrying out all the tasks, we gained valuable knowledge about the
+model driven development approach. We managed to satisfy the needs, of creating
+and ordering custom bicycles, of both the sales clerk, providing a textual
+editor, and the customer, providing a rich-featured graphical editor. We could
+offer a more customized GMF model in order to make it more user-friendly. Also,
+we could add a \emph{total price} label to the diagram so that the user can
+interactively see the total price, not just in the invoice. We have also managed
+to implement a model to text transformation for any custom model in the runtime
+environment by programatically invoking the \emph{XPand} template transformation,
+which offered us more insights in the M2T transformation technologies. In
+conclusion, by completing this project we have mastered the concepts and
+technologies present during the lectures, helping us think at a higher level of
+abstraction design our software using a \emph{model driven} approach.

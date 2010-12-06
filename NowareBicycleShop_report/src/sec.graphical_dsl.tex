@@ -1,46 +1,18 @@
 \section{Graphical DSL using GMF}
 \label{sec.gmf}
-
-\noindent \emph{GMF} is a framework for
-building modeling-like graphical Eclipse-based editors.
-\cite{Article_Introducing_GMF} GMF supports the generation of a graphical editor
-from a set of models. In this section we will present the important
-milestones of creating a graphical editor and why were they necessary. 
-
-\begin{itemize}
-  \item \emph{Graphical Definition Model}\\
-  \noindent Used to define graphical elements (figures, nodes, links) which will
-  be displayed in the editor.
-  \item \emph{Tooling Definition Model}\\
-  \noindent Used to specify the palette, creation tools and actions for the
-  graphical elements.
-  \item \emph{Mapping Model}\\
-  \noindent It is combined of the three previously
-created definition models (domain, graphical and tooling). It provides the input
-for the transfor- mation step. The OCL Constraints are implemented in the Mapping Model as Audit Rules.
-  \item \emph{Diagram Generation Model}\\
-  \noindent It is transformed from the three previous models. This model
-is used for generating the code for the graphical editor. It is similar to the EMF Generation
-Model, mentioned earlier. \cite{GMF_Tutorial}  
-\end{itemize}
-
-\noindent Having all the required models it is possible to generate the code
-necessary for a running diagram editor. When the user creates a new NBS diagram he is
-shown a canvas where elements of the model can be dragged and dropped from the
-palette. There are no connections between the certain parts
-of the bicycle, because they can be placed in any order and different bicycles
-might have different amount of parts. \\
-
-\noindent The user has the possibility to change the name of a part but changing
-the price is not allowed in the canvas. It is only possible to change the
-price in the Properties view. For that reason the Properties view should not be
-shown to the customer in the final implementation.  
-Validation error examples are shown in Figure \ref{fig.gmf_validation}.\\
+\noindent \emph{GMF} is a framework for building modeling-like graphical
+Eclipse-based editors, supporting the generation of a graphical editor from a
+set of models. Using the GMF dashboard, we
+derived the \emph{Tooling Definition Model} and \emph{Graphical Definition
+Model}. By combining these two we obtained the \emph{Mapping Model} which helpedus generate the \emph{Diagram Generation Model}. Firstly, we replaced thedefault icons, in the \emph{edit} plug-in with icons more relevant to our bike model.Than, in the \emph{.gmfgraph}, we modified the properties, such as size andbackground, for each figure. In the \emph{.gmfmap} file, we added feature labelmappings for all the fields we want to visualize while adding parts in thegraphical editor. Finally, we have launched the runtime environment and createdthree custom bicycle models with the graphical editor. The examples are depictedin appendix \ref{appendix.gmf_models}.\\
+\noindent We implemented the validation in GMF as \emph{audit rules} using the
+OCL constraints we have created in the Ecore model. If a concrete bicycle model
+violates these constraints, messages will be displayed in the problem view, whenvalidating the model, as depicted in appendix \ref{appendix.gmf_models}.\\
 
 \noindent Feature initializers were not a part of the implementation, however
 they could be useful. Every new bicycle model could have additional parameters
 with name and value set added on the initialization. For instance, this could be
-a new parameter named 'Telephone Number' having an empty default value.\\
-Modeling link constraints were neither part of implementation, since we do
-not use links in the project. Nonetheless, it is a useful feature that allows
-to constrain users from linking objects together. \\
+a new parameter named 'Telephone Number' having an empty default value. Modeling
+link constraints were neither part of implementation, since we do not use links
+in the project. Nonetheless, it is a useful feature that allows to constrain
+users from linking objects together.\\
