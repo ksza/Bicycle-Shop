@@ -7,29 +7,29 @@ building modeling-like graphical Eclipse-based editors.
 from a set of models. In this section we will present the important
 milestones of creating a graphical editor and why were they necessary. 
 
-\noindent Earlier we described how we created the \emph{Ecore} domain model. The
-\emph{Ecore} model defines the non-graphical information managed by the editor. The first
-model needed for the graphical editor is the \emph{Graphical Definition Model}
-(gmfgraph) which is used to define graphical elements (figures, nodes, links)
-which will be displayed in the editor. \\
-
-\noindent The \emph{Tooling Definition Model} (gmftool)
-is used to specify the palette, creation tools and actions for the
-graphical elements. The \emph{Mapping Model} (gmfmap) is combined of the
-three previously created definition models (domain, graphical and tooling).
-It provides the input for the transformation step. The OCL Constraints are
-implemented in the \emph{Mapping Model} as Audit Rules. The \emph{Mapping Model}
-is then transformed into the \emph{Diagram Generation Model} (gmfgen). This
-model is used for generating the code for the graphical editor. It is similar to
-the \emph{EMF Generation Model}, mentioned earlier. \cite{GMF_Tutorial}\\
+\begin{itemize}
+  \item \emph{Graphical Definition Model}\\
+  \noindent Used to define graphical elements (figures, nodes, links) which will
+  be displayed in the editor.
+  \item \emph{Tooling Definition Model}\\
+  \noindent Used to specify the palette, creation tools and actions for the
+  graphical elements.
+  \item \emph{Mapping Model}\\
+  \noindent It is combined of the three previously
+created definition models (domain, graphical and tooling). It provides the input
+for the transfor- mation step. The OCL Constraints are implemented in the Mapping Model as Audit Rules.
+  \item \emph{Diagram Generation Model}\\
+  \noindent It is transformed from the three previous models. This model
+is used for generating the code for the graphical editor. It is similar to the EMF Generation
+Model, mentioned earlier. \cite{GMF_Tutorial}  
+\end{itemize}
 
 \noindent Having all the required models it is possible to generate the code
 necessary for a running diagram editor. When the user creates a new NBS diagram he is
 shown a canvas where elements of the model can be dragged and dropped from the
 palette. There are no connections between the certain parts
 of the bicycle, because they can be placed in any order and different bicycles
-might have different amount of parts. This is an intuitive way to interact
-with the system for the customers of NBS.\\
+might have different amount of parts. \\
 
 \noindent The user has the possibility to change the name of a part but changing
 the price is not allowed in the canvas. It is only possible to change the
