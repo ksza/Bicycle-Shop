@@ -1,20 +1,17 @@
 \section{OCL Constraints}
 \label{sec.ocl_constraints}
 
-\noindent 
-\emph{Noware Bicycle Shop} (NBS) must provide rules to ensure that
+\noindent \emph{Noware Bicycle Shop} (NBS) must provide rules to ensure that
 only valid bikes are modeled and ordered by customers. To accomplish this, a 
 set of constraints were implemented in the \emph{Ecore} meta-model using \emph{OCL}.\\
 
-\noindent
-The list of textual constraints and their definitions in OCL are
-shown in the Appendix Figure \ref{appendix.validation}. All constraints were implemented as invariants using
-generated Java code (nbs.ecore) for the Bicycle object. Each invariant was given
+\noindent The list of textual constraints and their definitions in OCL are
+shown in the appendix \ref{appendix.ocl_constraints}. All constraints were
+implemented as invariants in the \emph{Ecore} model. Each invariant was given
 a name for the ease of reference. The invariants specify the valid sets
 of parts for the Bicycle model. OCL constraints are executed in the runtime
-workbench on newly created models. Examples of validation errors are shown in the Appendix Figure
-\ref{fig.ocl_bike_errors}, \ref{fig.ocl_ecore_handbreaks}.\\
+workbench on newly created models. Examples of validation errors are shown in
+figure \ref{fig.ocl_bike_errors} and \ref{fig.ocl_ecore_handbreaks}.\\
 
-\noindent 
-When progressing with the project, we have moved the OCL constraints from the
-\emph{Ecore} meta-model to the \emph{GMF} Audit Rules. This allowsrestricting customers from modeling invalid bikes in the \emph{GMF} diagrameditor, as well as displaying validations with user-friendlymessages.\\
+\noindent When progressing with the project, we have moved the OCL constraints
+from the \emph{Ecore} model into \emph{GMF}, implementing them as \emph{AuditRules}. This allows restricting customers from modeling invalid bikes in the \emph{GMF} diagrameditor, as well as displaying validations with user-friendlymessages.\\

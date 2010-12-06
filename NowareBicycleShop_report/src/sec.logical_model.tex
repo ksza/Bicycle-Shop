@@ -18,8 +18,7 @@ more easy-to-understand overview. The model is depicted in figure
 more concrete. This was achieved by defining a \emph{logical model} and
 implementing it in EMF. Models in EMF are represented as \emph{Ecore} which is 
 an implementation of \emph{eMOF} (Essential MOF\footnote{Meta-Object Facility}) meta-meta model. The resulting \emph{Ecore} model represents the \emph{meta-model} for
-the NBS' custom bicycles. The meta-model will be used both by customers of NBS and the sales
-clerks to model customized bicycles, which can be constructed using the
+the NBS' custom bicycles. The meta-model will be used to model customized bicycles, which can be constructed using the
 available bicycle parts. Relating to our \emph{logical model}, we have
 implemented the \emph{Ecore} model as described in figure \ref{fig.ecore_model}.
 We have defined the \emph{Node} as our top level abstraction for any element
@@ -51,8 +50,8 @@ the two types of gears a bicycle can have: \emph{InnerGear} and
 depending on the customers needs. The available types are defined as
 enumerations, such as \emph{PedalType} and \emph{SaddleType}. \\
 
-\noindent In the conceptual model we have thought described by a color. In the
-current implementation we have added this attribute only to the frame, but if
+\noindent In the conceptual model we have thought that each part should be
+described by a color. In the current implementation we have added this attribute only to the frame, but if
 needed, the model can easily be modified to support color definition for other parts as well.
 In the design phase we aimed for the possibility to specify any custom color for
 the frame, but in the implementation phase enumerating the different colors was
@@ -63,17 +62,15 @@ additional tool to provide RGB value to a certain color, this feature being out
 of the scope of the current work.\\
 
 \noindent The custom bicycle is represented as the \emph{Bicycle} class, which
-is made up of many \emph{Part}s and has information about the \emph{total price},
-\emph{delivery date} and the \emph{customer data}. The bicycle parts that define
-a custom bicycle are stored in the \emph{parameters} attribute of the
-\emph{Bicycle} class, which is modeled as a composition association from the
-\emph{Bicycle} to the \emph{Part} class, with the multiplicity 0..*. The total
-price, delivery date and customer data. While the first two are represented as
-trivial data type, the customer data is represented as the \emph{CustomerData}
+is made up of many \emph{Part}s and has information about the \emph{total
+price}, \emph{delivery date} and the \emph{customer data}. The bicycle parts
+that define a custom bicycle are stored in the \emph{parts} attribute of
+the \emph{Bicycle} class, which is modeled as a composition association from the
+\emph{Bicycle} to the \emph{Part} class, with the multiplicity 0..*. The customer data is represented as the \emph{CustomerData}
 class with the name and address parameters. In order to support more data than
 the essential ones defined as attributes, we have created the \emph{Parameter}
 class characterized by a name and a value. Both the Bicycle and the CustomerData
-are linked through a containment association with the Parameters class.\\
+are linked through a containment association with the Parameters class.\\
 
 \subsection{Custom Bicycle Models}
 Earlier in this section, we have discussed that EMF contains the \emph{Ecore}
@@ -91,7 +88,7 @@ illustrated in appendix \ref{appendix.emf_models}. The bikes are modeled as
 \emph{editor} presents all the elements that can be added to the model. The
 properties of different elements can be set in the properties view.\\
 
-In order to compute the total price of a custom bicycle and to define
+\noindent In order to compute the total price of a custom bicycle and to define
 prices for parts, we had to modify the generated model code. In the
 \emph{PartsImpl} abstract class we have attached the value
 10 to the \emph{PRICE\_EDEFAULT} attribute and annotated it with
@@ -102,17 +99,17 @@ sum of all the contained parts' prices. This method was also annotated with
 \emph{@generated NOT}.
 
 \subsection{Modeling Layers}
-\noindent As already discussed at the beginning of this section, in the Eclipse
-Modeling Framework (EMF) is based on the \emph{eMOF}. To create our \emph{Ecore} model,
+\noindent As already discussed at the beginning of this section, the Eclipse
+Modeling Framework (EMF) is based on \emph{eMOF}. To create our \emph{Ecore} model,
 we had to instantiate elements from the \emph{Ecore} meta-meta model:
 \emph{EClass}, \emph{EReference}, \emph{EAttribute} and \emph{EDataType}. To create custom
-bicycles, elements in our meta-model have to be instantiated. An explanation on
-the modeling levels and how models conform to each other is depicted in
-\ref{fig.metamodel_layers_schema}:
+bicycles, elements in our meta-model have to be instantiated in a more concrete
+model. An explanation on the modeling levels and how models conform to each
+other is depicted in figure \ref{fig.metamodel_layers_schema}:
 \begin{itemize}
   \item{M3} is the EMF meta meta-model which is based on eMOF used to
   define other meta-models; it is called meta meta-model because it can be used to
-  represent itself, representing its own meta-model
+  represent itself, being its own meta-model
   \item{M2} is the meta-model for modeling customized bikes, represented by
   our \emph{Ecore} model
   \item{M1} represents the custom bike model, so they are instances of the
