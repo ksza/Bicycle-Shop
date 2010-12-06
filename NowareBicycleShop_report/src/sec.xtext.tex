@@ -1,30 +1,32 @@
 \section{Textual DSL using XText}
 \label{sec.xtext}
-
 \noindent To help the sales clerk in their everyday tasks we have developed a
-textual DSL using \emph{XText} framework. A textual language can speed up the
-process of creating bicycle models and user data. Because of the nature of text
-files,
+textual DSL using \emph{XText} framework. A textual language can speed up the process of
+creating bicycle models and user data. Because of the nature of text files,
 sales clerk can easily copy and edit already created model instances.\\
 
-\noindent We have used an Extended Backus-Naur Form (EBNF) metalanguage
-notations to describe a textual DSL. Our textual DSL is external, meaning that
-it is new, not extending an existing language. As we have identified the
-entities, abstract types, properties and relations in the \emph{Ecore}
-meta-model, we use \emph{XText} to generate the textual DSL. Generated grammar
-was modified for our needs. The final grammar definition is listed in Figure
-\ref{appendix.xtext}. It is extendible and context-free.\\
+\noindent We have used an Extended Backus-Naur Form (EBNF)
+meta-language notations to describe a textual DSL. Our textual DSL is external,
+meaning that it is new, not extending an existing language. As we have
+identified the entities, attributes and relations in the \emph{Ecore} meta-model, we use
+\emph{XText} to generate the textual DSL. It creates a grammar with rules for
+our entities, abstract types, propteries, relations, etc. We build upon this
+grammar and modify it for our needs. The final \emph{XText} grammar definition
+is listed in figure \ref{appendix.xtext}. It is extensible and context-free.\\
 
-\noindent The grammar is rich, having types for entities, attribute names,
-enumerators and other details. This is used to provide context assistance in the
-tools. When using the textual DSL, the editor executes syntax checking (Figure
-\ref{fig.dsl_empty_model}) and suggests code completion (Figures
-\ref{fig.dsl_autocomplete_parts}, \ref{fig.dsl_autocomplete_values}). The user
-also gets help on what parts are left to define. Moreover, the keywords and
-class names are differentiated with syntax highlighting. The target user (sales
-clerk) might not have any programming experience, so we want the language to
-seem natural. Therefore statement terminators, such as symbols or line feeds,
-are not used. Excluding separators from the grammar further simplifies the
-layout. Because of the nature of text files, user can easily copy and edit
-already created model instances(delete).
+\noindent The target user for the language is the sales clerk and he might not
+have any programming experience, so we want the language to seem
+natural. Therefore statement terminators, such as symbols or line feeds, are not
+used. The grammar is rich, having types for entities, attribute
+names, enumerators and other details. This is used to provide context assistance
+in the tools.\\
 
+\noindent When using the textual DSL, the editor executes syntax checking
+(figure \ref{fig.dsl_empty_model}) and suggests code completion (figure
+\ref{fig.dsl_autocomplete_parts} and \ref{fig.dsl_autocomplete_values}). The
+user also gets help on what parts are left to define. The grammar is simple and
+fast to enter while keeping it perspicuous. Excluding separators from the
+grammar further simplifies the layout. Moreover, the keywords and class names
+are differentiated with syntax highlighting. We have depicted three custom
+bicycles modeled in the the textual editor in figure \ref{fig.xtext_city_bike},
+\ref{fig.xtext_sport_model} and \ref{fig.xtext_unicycle_model}.
