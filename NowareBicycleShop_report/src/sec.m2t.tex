@@ -1,44 +1,46 @@
 \section{Model to Text Transformation using XPand}
 \label{sec.m2t}
-\noindent In the implementation of NBS, we enable the possibility of
-generating an invoice for a custom bicycle. The invoice will contain the
-customer details, delivery date, the total price, a detailed
-list of the bicycle parts and additional parameters. In
-order to achieve this functionality we have implemented a transformation from a
-bicycle model to a textual representation in the \emph{HTML} format. The
-feature is accessible from the graphical editor. When the user has finished
-creating the bicycle and would like to finalize the order, he can invoke the
-contextual menu on the bicycle diagram and select the option ``Edit/Duplicate''. This will generate the current configuration invoice and open it in a browser. The above described scenario is depicted in figure \ref{fig.xpand.usecase}. The
-code for the extensions template is shown in appendix
-\ref{appendix.xpand.implementation}.\\
+\noindent In the implementation of NBS, we enable the generation of invoice for
+a custom bicycle. The invoice will contain the customer details, delivery date,
+the total price, a detailed list of the bicycle parts and additional parameters.
+In order to achieve this functionality we have implemented a transformation from
+a bicycle model to a textual representation in the HTML format. The feature is
+accessible from the graphical editor and can be invoked by selecting the option
+``Edit/Duplicate'' from the bicycle diagram contextual menu. This will generate
+the current configuration invoice and open it in a browser. The above described
+scenario is depicted in figure \ref{fig.xpand.usecase}. The code for the
+extensions template is shown in appendix
+\ref{appendix.xpand.implementation}.\\
 
-\noindent To implement the M2T Transformation, we have used \emph{XPand}. We
+\noindent To implement the M2T transformation, we have used \emph{XPand}. We
 have implemented the templates in the same project with the EMF model. To be able to
 do this, the first step was to enable the Xtend/Xpand nature on the model
 project. Afterwards, we defined the two template files, \emph{Extensions.ext}
 and \emph{InvoiceTemplate.xpt}, in the \emph{model/template} package. This way
 both templates are able to import and work with the \emph{nowarebicycleshop}
-model. Figure \ref{fig.xpand.model_xpand_invoice} illustrates the
-InvoiceTemplate file and the resulting invoice a M2T transformation applied to
-the presented concrete model.\\
+model. Figure \ref{fig.xpand.model_xpand_invoice} illustrates the Xpand template
+for our \emph{Eore} meta-model and an invoice as a result of M2T transformation
+applied to the presented concrete model.\\
 
-\noindent \emph{Extensions.ext} is an Xtend template which defines three utility
-methods for the Xpand template: \emph{getTitle()} which creates the file name
-for the invoice, \emph{getDocumentHeader()} to create the HTML header and
-\emph{getDocumentFooter} to create the HTML footer. \emph{InvoiceTemplate.xpt}
-is a Xpand template where we define the actual transformation from the custom
-bicycle model to an invoice represented as HTML. In the template file we define
-two templates: \emph{main} and \emph{part}. The main template creates the file
-with the name provided by the \emph{getTitle()} method in the extension and
-fills it with the followings:
+\noindent \emph{InvoiceTemplate.xpt} is a Xpand template where we define the
+transformation from a custom bicycle model to an invoice. In the template file
+we define three templates: \emph{main}, \emph{part} and \emph{param}. The main
+template creates the file with the name provided by the \emph{getTitle()}
+utility method and fills it with the following:
 \begin{itemize}
-  \item document header provided by \emph{getDocumentHeader()}
+  \item header for HTML document, provided by \emph{getDocumentHeader()}
+  utility method
   \item customer name, address, delivery date and total price
-  \item for each part in the bicycle model, calls the \emph{part} template
-  filling in information regarding each bicycle part
-  \item document footer provided by \emph{getDocumentFooter}\\
+  \item calls the \emph{part} template to fill the information for each bicycle
+  part
+  \item calls the \emph{param} template to fill the information for each
+  additional parameter
+  \item footer for HTML document, provided by \emph{getDocumentFooter()}
+  method\\
 \end{itemize}
 
+\noindent The utility methods are defined in a Xtend template
+\emph{Extensions.ext} (Figure \ref{lst.extensions}).\\
 \noindent After implementing the templates, we have created the
 \emph{dk.itu.mdd.nbs.diagram.custom} plug-in as a GMF extension point, in order
 to get notified when an edit action occurs on the \emph{bicycle diagram}. The
